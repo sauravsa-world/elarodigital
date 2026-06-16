@@ -143,8 +143,6 @@
 
 @utility noise {
   position: relative;
-}
-@utility noise {
   &::after {
     content: "";
     position: absolute;
