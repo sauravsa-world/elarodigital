@@ -274,7 +274,11 @@ export const Route = createFileRoute("/services/$slug")({
 });
 
 function ServiceDetailPage() {
-  const { service, detail } = Route.useLoaderData();
+  const data = Route.useLoaderData() as {
+    service: (typeof services)[number];
+    detail: ServiceDetail;
+  };
+  const { service, detail } = data;
   const Icon = service.icon;
 
   return (
