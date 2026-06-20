@@ -62,7 +62,7 @@ export function Hero() {
           </Link>
           <Link
             to="/contact"
-            search={{ intent: "quote" } as never}
+            hash="quote"
             className="inline-flex items-center gap-2 rounded-full glass px-6 py-3.5 text-sm font-medium hover:text-gold transition"
           >
             <FileText className="size-4" /> Request Quote
