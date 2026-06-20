@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/site/PageShell";
 import { services } from "@/data/services";
 import { LeadForm } from "@/components/site/LeadForm";
@@ -27,35 +27,36 @@ function ServicesPage() {
         description="A single, senior team handling the strategy, creative and execution behind your growth."
       />
       <section className="py-20">
-        <div className="mx-auto max-w-5xl px-4 space-y-6">
+        <div className="mx-auto max-w-6xl px-4 grid gap-5 sm:grid-cols-2">
           {services.map((s, i) => {
             const Icon = s.icon;
             return (
-              <motion.article
+              <motion.div
                 key={s.slug}
-                id={s.slug}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.5 }}
-                className="rounded-3xl glass p-8 sm:p-10 flex flex-col sm:flex-row gap-6 scroll-mt-32"
+                transition={{ duration: 0.45, delay: (i % 2) * 0.05 }}
               >
-                <div className="shrink-0 grid place-items-center size-14 rounded-2xl bg-gold/10 text-gold ring-1 ring-gold/20">
-                  <Icon className="size-6" />
-                </div>
-                <div className="flex-1">
-                  <h2 className="text-2xl sm:text-3xl font-medium">{s.title}</h2>
-                  <p className="mt-3 text-base text-foreground/80 leading-relaxed">{s.short}</p>
-                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.description}</p>
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {s.keywords.map((k) => (
-                      <span key={k} className="text-xs px-3 py-1 rounded-full glass text-muted-foreground">
-                        {k}
+                <Link
+                  to="/services/$slug"
+                  params={{ slug: s.slug }}
+                  className="group block rounded-3xl glass p-8 hover:border-gold/40 transition h-full"
+                >
+                  <div className="flex items-start gap-5">
+                    <div className="shrink-0 grid place-items-center size-14 rounded-2xl bg-gold/10 text-gold ring-1 ring-gold/20">
+                      <Icon className="size-6" />
+                    </div>
+                    <div className="flex-1">
+                      <h2 className="text-2xl font-medium group-hover:text-gold transition">{s.title}</h2>
+                      <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.short}</p>
+                      <span className="mt-5 inline-flex items-center gap-1 text-sm text-gold">
+                        View details →
                       </span>
-                    ))}
+                    </div>
                   </div>
-                </div>
-              </motion.article>
+                </Link>
+              </motion.div>
             );
           })}
         </div>

@@ -34,8 +34,8 @@ export function ServicesGrid() {
                   <h3 className="mt-6 text-xl font-medium">{s.title}</h3>
                   <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.short}</p>
                   <Link
-                    to="/services"
-                    hash={s.slug}
+                    to="/services/$slug"
+                    params={{ slug: s.slug }}
                     className="mt-6 inline-flex items-center gap-1 text-sm text-gold hover:gap-2 transition-all"
                   >
                     Learn more <ArrowUpRight className="size-4" />

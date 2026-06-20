@@ -38,7 +38,11 @@ export function Navbar() {
           }`}
         >
           <Link to="/" className="flex items-center gap-2 pl-1">
-            <img src={logo.url} alt="Elarodital — Digital Marketing Agency" className="h-8 w-auto" />
+            <img src={logo.url} alt="ElaroDigital — Digital Marketing Agency" className="h-8 w-auto" />
+            <span className="font-display text-lg sm:text-xl tracking-tight">
+              <span className="text-foreground">Elaro</span>
+              <span className="text-gold">Digital</span>
+            </span>
           </Link>
 
           <ul className="hidden lg:flex items-center gap-1">
