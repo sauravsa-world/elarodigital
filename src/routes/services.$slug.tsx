@@ -236,8 +236,9 @@ const details: Record<string, ServiceDetail> = {
 export const Route = createFileRoute("/services/$slug")({
   loader: ({ params }) => {
     const service = services.find((s) => s.slug === params.slug);
-    if (!service || !details[params.slug]) throw notFound();
-    return { service, detail: details[params.slug] };
+    const detail = details[params.slug];
+    if (!service || !detail) throw notFound();
+    return { service, detail };
   },
   head: ({ loaderData }) => {
     if (!loaderData) return { meta: [{ title: "Service — ElaroDigital" }] };
