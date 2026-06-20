@@ -17,11 +17,11 @@ import { faqs } from "@/data/faqs";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Elarodital — Premium Digital Marketing Agency in Bihar, India" },
-      { name: "description", content: "Elarodital is a premium digital marketing agency offering SEO, Social Media Marketing, Meta Ads, Google Ads, Website Development, App Development, Graphic Design, WhatsApp Marketing & Lead Generation across Bihar and India." },
-      { name: "keywords", content: "Digital Marketing Agency in Bihar, Digital Marketing Company in India, SEO Services in Bihar, Social Media Marketing Agency, Meta Ads Expert, Google Ads Agency, Website Development Company, App Development Company, Graphic Design Services, WhatsApp Marketing Services, Lead Generation Agency, Local SEO" },
-      { property: "og:title", content: "Elarodital — Premium Digital Marketing Agency in Bihar" },
-      { property: "og:description", content: "Bihar's premium digital marketing agency. SEO, ads, websites and lead generation that actually drive growth." },
+      { title: "Digital Marketing Agency in Bihar & India | ElaroDigital" },
+      { name: "description", content: "ElaroDigital is a results-driven digital marketing agency in Bihar offering SEO, Google Ads, Meta Ads, Social Media Marketing, Website & App Development, WhatsApp Marketing, Graphic Design and Lead Generation across Patna, Muzaffarpur, Gaya, Darbhanga, Bhagalpur, Purnia and all India." },
+      { name: "keywords", content: "Digital Marketing Agency in Bihar, Digital Marketing Company in Patna, SEO Services Bihar, SEO Agency Patna, Google Ads Bihar, Meta Ads Bihar, Social Media Marketing Patna, Website Development Bihar, App Development Bihar, WhatsApp Marketing, Lead Generation Bihar, Muzaffarpur, Gaya, Darbhanga, Bhagalpur, Purnia" },
+      { property: "og:title", content: "Digital Marketing Agency in Bihar & India | ElaroDigital" },
+      { property: "og:description", content: "Results-driven SEO, ads, websites and lead generation for businesses across Bihar and India." },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],

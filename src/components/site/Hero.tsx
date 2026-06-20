@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowRight, MessageCircle, Star, Sparkles } from "lucide-react";
+import { ArrowRight, FileText, Star, Sparkles } from "lucide-react";
 
 export function Hero() {
   return (
@@ -31,22 +31,20 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.05 }}
-          className="mt-7 text-5xl sm:text-7xl lg:text-[88px] font-medium leading-[0.98] tracking-tight"
+          className="mt-7 text-4xl sm:text-6xl lg:text-[72px] font-medium leading-[1.02] tracking-tight"
         >
-          We build brands that{" "}
-          <span className="gold-gradient-text italic font-normal">grow</span>,
-          <br className="hidden sm:block" />
-          not just look good.
+          Grow Your Business with{" "}
+          <span className="gold-gradient-text italic font-normal">Results-Driven</span>{" "}
+          Digital Marketing Services in Bihar & India
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="mx-auto mt-7 max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed"
+          className="mx-auto mt-7 max-w-3xl text-base sm:text-lg text-muted-foreground leading-relaxed"
         >
-          A full-stack digital marketing agency delivering SEO, performance ads, websites and lead generation
-          for ambitious businesses across India.
+          We help businesses generate more leads, increase sales, improve online visibility and scale faster through SEO, Google Ads, Meta Ads, Social Media Marketing, Website Development, App Development, WhatsApp Marketing, Graphic Design and Lead Generation services across Patna, Muzaffarpur, Gaya, Darbhanga, Bhagalpur, Purnia and all over India.
         </motion.p>
 
         <motion.div
@@ -59,17 +57,16 @@ export function Hero() {
             to="/contact"
             className="group inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3.5 text-sm font-medium text-primary-foreground shadow-glow hover:opacity-95 transition"
           >
-            Book a Free Strategy Call
+            Get Free Consultation
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
-          <a
-            href="https://wa.me/919999999999"
-            target="_blank"
-            rel="noreferrer"
+          <Link
+            to="/contact"
+            hash="quote"
             className="inline-flex items-center gap-2 rounded-full glass px-6 py-3.5 text-sm font-medium hover:text-gold transition"
           >
-            <MessageCircle className="size-4" /> Chat on WhatsApp
-          </a>
+            <FileText className="size-4" /> Request Quote
+          </Link>
         </motion.div>
 
         <motion.div
