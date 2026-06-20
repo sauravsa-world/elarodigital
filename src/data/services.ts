@@ -8,7 +8,6 @@ import {
   Palette,
   MessageCircle,
   Magnet,
-  MapPin,
   type LucideIcon,
 } from "lucide-react";
 
@@ -102,14 +101,5 @@ export const services: Service[] = [
       "Landing pages, lead magnets, ad funnels and CRM integration that fill your sales calendar.",
     icon: Magnet,
     keywords: ["Lead Generation Agency"],
-  },
-  {
-    slug: "local-seo",
-    title: "Local SEO",
-    short: "Dominate ‘near me’ searches in your city.",
-    description:
-      "Google Business Profile optimisation, local citations, reviews and hyper-local content for foot traffic.",
-    icon: MapPin,
-    keywords: ["Local SEO Services", "Google My Business"],
   },
 ];
