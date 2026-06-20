@@ -18,17 +18,19 @@ export type Service = {
   description: string;
   icon: LucideIcon;
   keywords: string[];
+  related: string[];
 };
 
 export const services: Service[] = [
   {
-    slug: "seo",
+    slug: "seo-services",
     title: "Search Engine Optimization",
     short: "Rank #1 on Google for keywords that bring real buyers.",
     description:
       "Technical SEO, on-page optimization, content strategy and authority building that compounds month over month.",
     icon: Search,
     keywords: ["SEO Services in Bihar", "SEO Agency", "Best SEO Company"],
+    related: ["google-ads", "website-development"],
   },
   {
     slug: "social-media-marketing",
@@ -38,6 +40,7 @@ export const services: Service[] = [
       "Strategy, content production, community growth and paid amplification across Instagram, Facebook, LinkedIn and YouTube.",
     icon: Megaphone,
     keywords: ["Social Media Marketing Agency", "Instagram Marketing"],
+    related: ["meta-ads", "graphic-design"],
   },
   {
     slug: "meta-ads",
@@ -47,6 +50,7 @@ export const services: Service[] = [
       "Full-funnel Meta campaigns with creative testing, custom audiences and pixel-driven retargeting.",
     icon: Target,
     keywords: ["Meta Ads Expert", "Facebook Ads Agency"],
+    related: ["social-media-marketing", "lead-generation"],
   },
   {
     slug: "google-ads",
@@ -56,6 +60,7 @@ export const services: Service[] = [
       "Search, Performance Max, YouTube and Display campaigns optimised for cost-per-lead and conversion value.",
     icon: MousePointerClick,
     keywords: ["Google Ads Agency", "PPC Services"],
+    related: ["lead-generation", "seo-services"],
   },
   {
     slug: "website-development",
@@ -65,6 +70,7 @@ export const services: Service[] = [
       "Custom websites built on modern stacks with conversion-focused UX, blazing Core Web Vitals and built-in SEO.",
     icon: Code2,
     keywords: ["Website Development Company", "Web Design Agency"],
+    related: ["seo-services", "graphic-design"],
   },
   {
     slug: "app-development",
@@ -74,6 +80,7 @@ export const services: Service[] = [
       "Native and cross-platform mobile apps with elegant interfaces and rock-solid backends.",
     icon: Smartphone,
     keywords: ["App Development Company"],
+    related: ["website-development", "graphic-design"],
   },
   {
     slug: "graphic-design",
@@ -83,6 +90,7 @@ export const services: Service[] = [
       "Logos, brand systems, ad creatives, packaging, social posts and pitch decks designed with intention.",
     icon: Palette,
     keywords: ["Graphic Design Services"],
+    related: ["social-media-marketing", "website-development"],
   },
   {
     slug: "whatsapp-marketing",
@@ -92,6 +100,7 @@ export const services: Service[] = [
       "Bulk WhatsApp campaigns, automation flows, chatbots and Click-to-WhatsApp ads that deliver verified leads.",
     icon: MessageCircle,
     keywords: ["WhatsApp Marketing Services"],
+    related: ["lead-generation", "meta-ads"],
   },
   {
     slug: "lead-generation",
@@ -101,5 +110,6 @@ export const services: Service[] = [
       "Landing pages, lead magnets, ad funnels and CRM integration that fill your sales calendar.",
     icon: Magnet,
     keywords: ["Lead Generation Agency"],
+    related: ["seo-services", "google-ads"],
   },
 ];
