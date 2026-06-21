@@ -17,7 +17,7 @@ import {
   Zap,
 } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/919999999999";
+const WHATSAPP_URL = "https://wa.me/919431011994";
 
 type SampleProject = { title: string; summary: string; result: string };
 type Detail = {
