@@ -609,15 +609,6 @@ function ServiceDetailPage() {
         </div>
       </section>
 
-      {/* Removed legacy hero block below */}
-      {false && (
-        <div>
-            <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold">
-              Service
-            </div>
-        </div>
-      )}
-
       {/* Overview / Benefits */}
       <section className="py-16">
         <div className="mx-auto max-w-6xl px-4">
