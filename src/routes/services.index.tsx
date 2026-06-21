@@ -4,7 +4,7 @@ import { services } from "@/data/services";
 import { LeadForm } from "@/components/site/LeadForm";
 import { motion } from "framer-motion";
 
-export const Route = createFileRoute("/services")({
+export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
       { title: "Services — SEO, Ads, Web & App Development | Elarodital" },
