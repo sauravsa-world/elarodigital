@@ -84,6 +84,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Elarodital" },
       { name: "twitter:card", content: "summary_large_image" },
+      { title: "Elaro Digital | Digital Marketing Agency in Bihar" },
+      { property: "og:title", content: "Elaro Digital | Digital Marketing Agency in Bihar" },
+      { name: "twitter:title", content: "Elaro Digital | Digital Marketing Agency in Bihar" },
+      { name: "description", content: "Looking for a Digital Marketing Agency in Bihar? Elaro Digital provides SEO Services, Website Development, Social Media Marketing, Meta Ads, Graphic Design, App" },
+      { property: "og:description", content: "Looking for a Digital Marketing Agency in Bihar? Elaro Digital provides SEO Services, Website Development, Social Media Marketing, Meta Ads, Graphic Design, App" },
+      { name: "twitter:description", content: "Looking for a Digital Marketing Agency in Bihar? Elaro Digital provides SEO Services, Website Development, Social Media Marketing, Meta Ads, Graphic Design, App" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/hgGQFntifjMMefGsvzyoWEfWwa32/social-images/social-1782043893977-ChatGPT_Image_Jun_21,_2026,_05_40_15_PM.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/hgGQFntifjMMefGsvzyoWEfWwa32/social-images/social-1782043893977-ChatGPT_Image_Jun_21,_2026,_05_40_15_PM.webp" },
     ],
     links: [
       {
