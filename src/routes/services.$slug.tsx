@@ -580,13 +580,10 @@ function ServiceDetailPage() {
       {/* Hero */}
       <section className="relative py-20 sm:py-28">
         <div className="absolute inset-0 radial-gold opacity-60 pointer-events-none" />
-        <div className="relative mx-auto max-w-5xl px-4 grid gap-10 sm:grid-cols-[auto_minmax(0,1fr)] items-center">
-          <div className="shrink-0 grid place-items-center size-28 sm:size-36 rounded-3xl glass-strong text-gold ring-1 ring-gold/20">
-            <Icon className="size-14 sm:size-16" />
-          </div>
-          <div className="min-w-0">
+        <div className="relative mx-auto max-w-6xl px-4 grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-center">
+          <div className="min-w-0 order-2 lg:order-1">
             <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold">
-              Service
+              <Icon className="size-3.5" /> Service
             </div>
             <h1 className="mt-4 text-4xl sm:text-5xl font-medium leading-tight">{detail.h1}</h1>
             <p className="mt-4 text-lg text-muted-foreground">{detail.heroTagline}</p>
@@ -598,6 +595,16 @@ function ServiceDetailPage() {
             <div className="mt-8">
               <ServiceCTAs />
             </div>
+          </div>
+          <div className="order-1 lg:order-2 relative">
+            <div className="absolute -inset-6 rounded-[2rem] bg-gold/10 blur-2xl" />
+            <img
+              src={service.image}
+              alt={`${service.title} illustration`}
+              width={1280}
+              height={800}
+              className="relative w-full h-auto rounded-3xl ring-1 ring-gold/20 glass-strong"
+            />
           </div>
         </div>
       </section>

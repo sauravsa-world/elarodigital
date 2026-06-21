@@ -28,6 +28,16 @@ export function ServicesGrid() {
               >
                 <div className="absolute -top-24 -right-24 size-56 rounded-full bg-gold/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="relative">
+                  <div className="mb-6 overflow-hidden rounded-2xl ring-1 ring-white/5">
+                    <img
+                      src={s.image}
+                      alt={`${s.title} preview`}
+                      width={1280}
+                      height={800}
+                      loading="lazy"
+                      className="aspect-[16/10] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
                   <div className="grid place-items-center size-12 rounded-2xl bg-gold/10 text-gold ring-1 ring-gold/20">
                     <Icon className="size-5" />
                   </div>

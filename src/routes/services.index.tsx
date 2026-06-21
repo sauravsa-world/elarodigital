@@ -43,6 +43,16 @@ function ServicesPage() {
                   params={{ slug: s.slug }}
                   className="group block rounded-3xl glass p-8 hover:border-gold/40 transition h-full"
                 >
+                  <div className="mb-6 overflow-hidden rounded-2xl ring-1 ring-white/5">
+                    <img
+                      src={s.image}
+                      alt={`${s.title} preview`}
+                      width={1280}
+                      height={800}
+                      loading="lazy"
+                      className="aspect-[16/9] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
                   <div className="flex items-start gap-5">
                     <div className="shrink-0 grid place-items-center size-14 rounded-2xl bg-gold/10 text-gold ring-1 ring-gold/20">
                       <Icon className="size-6" />
