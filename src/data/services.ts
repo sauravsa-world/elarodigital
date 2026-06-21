@@ -10,6 +10,15 @@ import {
   Magnet,
   type LucideIcon,
 } from "lucide-react";
+import seoImg from "@/assets/services/seo.jpg";
+import smmImg from "@/assets/services/social-media.jpg";
+import metaImg from "@/assets/services/meta-ads.jpg";
+import googleImg from "@/assets/services/google-ads.jpg";
+import webImg from "@/assets/services/web-dev.jpg";
+import appImg from "@/assets/services/app-dev.jpg";
+import gdImg from "@/assets/services/graphic-design.jpg";
+import waImg from "@/assets/services/whatsapp.jpg";
+import leadImg from "@/assets/services/lead-gen.jpg";
 
 export type Service = {
   slug: string;
@@ -17,6 +26,7 @@ export type Service = {
   short: string;
   description: string;
   icon: LucideIcon;
+  image: string;
   keywords: string[];
   related: string[];
 };
@@ -29,6 +39,7 @@ export const services: Service[] = [
     description:
       "Technical SEO, on-page optimization, content strategy and authority building that compounds month over month.",
     icon: Search,
+    image: seoImg,
     keywords: ["SEO Services in Bihar", "SEO Agency", "Best SEO Company"],
     related: ["google-ads", "website-development"],
   },
@@ -39,6 +50,7 @@ export const services: Service[] = [
     description:
       "Strategy, content production, community growth and paid amplification across Instagram, Facebook, LinkedIn and YouTube.",
     icon: Megaphone,
+    image: smmImg,
     keywords: ["Social Media Marketing Agency", "Instagram Marketing"],
     related: ["meta-ads", "graphic-design"],
   },
@@ -49,6 +61,7 @@ export const services: Service[] = [
     description:
       "Full-funnel Meta campaigns with creative testing, custom audiences and pixel-driven retargeting.",
     icon: Target,
+    image: metaImg,
     keywords: ["Meta Ads Expert", "Facebook Ads Agency"],
     related: ["social-media-marketing", "lead-generation"],
   },
@@ -59,6 +72,7 @@ export const services: Service[] = [
     description:
       "Search, Performance Max, YouTube and Display campaigns optimised for cost-per-lead and conversion value.",
     icon: MousePointerClick,
+    image: googleImg,
     keywords: ["Google Ads Agency", "PPC Services"],
     related: ["lead-generation", "seo-services"],
   },
@@ -69,6 +83,7 @@ export const services: Service[] = [
     description:
       "Custom websites built on modern stacks with conversion-focused UX, blazing Core Web Vitals and built-in SEO.",
     icon: Code2,
+    image: webImg,
     keywords: ["Website Development Company", "Web Design Agency"],
     related: ["seo-services", "graphic-design"],
   },
@@ -79,6 +94,7 @@ export const services: Service[] = [
     description:
       "Native and cross-platform mobile apps with elegant interfaces and rock-solid backends.",
     icon: Smartphone,
+    image: appImg,
     keywords: ["App Development Company"],
     related: ["website-development", "graphic-design"],
   },
@@ -89,6 +105,7 @@ export const services: Service[] = [
     description:
       "Logos, brand systems, ad creatives, packaging, social posts and pitch decks designed with intention.",
     icon: Palette,
+    image: gdImg,
     keywords: ["Graphic Design Services"],
     related: ["social-media-marketing", "website-development"],
   },
@@ -99,6 +116,7 @@ export const services: Service[] = [
     description:
       "Bulk WhatsApp campaigns, automation flows, chatbots and Click-to-WhatsApp ads that deliver verified leads.",
     icon: MessageCircle,
+    image: waImg,
     keywords: ["WhatsApp Marketing Services"],
     related: ["lead-generation", "meta-ads"],
   },
@@ -109,6 +127,7 @@ export const services: Service[] = [
     description:
       "Landing pages, lead magnets, ad funnels and CRM integration that fill your sales calendar.",
     icon: Magnet,
+    image: leadImg,
     keywords: ["Lead Generation Agency"],
     related: ["seo-services", "google-ads"],
   },
