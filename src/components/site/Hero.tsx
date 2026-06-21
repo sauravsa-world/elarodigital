@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowRight, FileText, Star, Sparkles } from "lucide-react";
+import { ArrowRight, FileText, Star, Sparkles, MessageCircle } from "lucide-react";
 
 export function Hero() {
   return (
@@ -67,6 +67,14 @@ export function Hero() {
           >
             <FileText className="size-4" /> Request Quote
           </Link>
+          <a
+            href="https://wa.me/919431011994"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full glass px-6 py-3.5 text-sm font-medium hover:text-gold transition"
+          >
+            <MessageCircle className="size-4" /> WhatsApp Now
+          </a>
         </motion.div>
 
         <motion.div
