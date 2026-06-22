@@ -2,21 +2,26 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { ArrowRight } from "lucide-react";
 import { services } from "@/data/services";
+import { submitContactForm } from "@/lib/contact.functions";
 
 export function LeadForm() {
   const [loading, setLoading] = useState(false);
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
     const fd = new FormData(e.currentTarget);
-    const payload = Object.fromEntries(fd.entries());
-    console.log("Lead submitted:", payload);
-    setTimeout(() => {
-      setLoading(false);
-      (e.target as HTMLFormElement).reset();
+    const payload = Object.fromEntries(fd.entries()) as Record<string, string>;
+
+    try {
+      await submitContactForm({ data: payload as Parameters<typeof submitContactForm>[0]["data"] });
       toast.success("Thank you! We'll reach out within 24 hours.");
-    }, 700);
+      (e.target as HTMLFormElement).reset();
+    } catch (err) {
+      toast.error("Something went wrong. Please try again or WhatsApp us directly.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
