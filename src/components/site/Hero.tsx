@@ -68,7 +68,7 @@ export function Hero() {
             <FileText className="size-4" /> Request Quote
           </Link>
           <a
-            href="https://wa.me/919431011994"
+            href="https://api.whatsapp.com/send?phone=919431011994"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-full glass px-6 py-3.5 text-sm font-medium hover:text-gold transition"

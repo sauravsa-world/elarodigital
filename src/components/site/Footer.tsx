@@ -62,7 +62,7 @@ export function Footer() {
             <h3 className="text-sm font-medium tracking-wider uppercase text-gold">Get in touch</h3>
             <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-3"><Phone className="size-4 mt-0.5 text-gold" /> <a href="tel:+919431011994" className="hover:text-foreground">+91 94310 11994 (WhatsApp)</a></li>
-              <li className="flex items-start gap-3"><Mail className="size-4 mt-0.5 text-gold" /> <a href="mailto:hello@elarodital.com" className="hover:text-foreground">hello@elarodital.com</a></li>
+              <li className="flex items-start gap-3"><Mail className="size-4 mt-0.5 text-gold" /> <a href="mailto:elarodigitalagency@gmail.com" className="hover:text-foreground">elarodigitalagency@gmail.com</a></li>
               <li className="flex items-start gap-3"><MapPin className="size-4 mt-0.5 text-gold" /> Powerganj, Bairagi, Gaya, Bihar</li>
             </ul>
           </div>
