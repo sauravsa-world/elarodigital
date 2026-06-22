@@ -14,7 +14,7 @@ export function LeadForm() {
     const payload = Object.fromEntries(fd.entries()) as Record<string, string>;
 
     try {
-      await submitContactForm({ data: payload });
+      await submitContactForm({ data: payload as Parameters<typeof submitContactForm>[0]["data"] });
       toast.success("Thank you! We'll reach out within 24 hours.");
       (e.target as HTMLFormElement).reset();
     } catch (err) {
