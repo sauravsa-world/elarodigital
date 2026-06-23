@@ -2,7 +2,9 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { ArrowRight } from "lucide-react";
 import { services } from "@/data/services";
-import { submitContactForm } from "@/lib/contact.functions";
+
+const CONTACT_EMAIL = "elarodigitalagency@gmail.com";
+const FORMSUBMIT_URL = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 
 export function LeadForm() {
   const [loading, setLoading] = useState(false);
@@ -11,14 +13,42 @@ export function LeadForm() {
     e.preventDefault();
     setLoading(true);
     const fd = new FormData(e.currentTarget);
-    const payload = Object.fromEntries(fd.entries()) as Record<string, string>;
+    const payload: Record<string, string> = {
+      _subject: "New lead from ElaroDigital website",
+      _template: "table",
+      _captcha: "false",
+    };
+
+    fd.forEach((value, key) => {
+      const stringValue = String(value).trim();
+      if (stringValue) {
+        payload[key] = stringValue;
+      }
+    });
 
     try {
-      await submitContactForm({ data: payload as Parameters<typeof submitContactForm>[0]["data"] });
-      toast.success("Thank you! Your details have been sent to elarodigitalagency@gmail.com.");
+      const response = await fetch(FORMSUBMIT_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = (await response.json().catch(() => ({}))) as {
+        success?: string | boolean;
+        message?: string;
+      };
+
+      if (!response.ok || String(result.success) !== "true") {
+        throw new Error(result.message || "Failed to submit contact form");
+      }
+
+      toast.success(`Thank you! Your details have been sent to ${CONTACT_EMAIL}.`);
       (e.target as HTMLFormElement).reset();
     } catch (err) {
-      toast.error("Something went wrong. Please try again or email us at elarodigitalagency@gmail.com.");
+      toast.error(`Something went wrong. Please try again or email us at ${CONTACT_EMAIL}.`);
     } finally {
       setLoading(false);
     }
