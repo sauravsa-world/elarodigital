@@ -16,24 +16,35 @@ export const submitContactForm = createServerFn({ method: "POST" })
     })
   )
   .handler(async ({ data }) => {
-    const formData = new FormData();
+    const payload: Record<string, string> = {
+      _subject: "New lead from Elarodigital website",
+      _template: "table",
+      _captcha: "false",
+    };
     Object.entries(data).forEach(([key, value]) => {
       if (value !== undefined && value !== "") {
-        formData.append(key, String(value));
+        payload[key] = String(value);
       }
     });
 
-    formData.append("_subject", "New lead from Elarodigital website");
-    formData.append("_template", "table");
-    formData.append("_captcha", "false");
-
     const response = await fetch(FORMSUBMIT_URL, {
       method: "POST",
-      body: formData,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        Origin: "https://elarodigital.lovable.app",
+        Referer: "https://elarodigital.lovable.app/contact",
+      },
+      body: JSON.stringify(payload),
     });
 
-    if (!response.ok) {
-      throw new Error("Failed to submit contact form");
+    const result = (await response.json().catch(() => ({}))) as {
+      success?: string | boolean;
+      message?: string;
+    };
+
+    if (!response.ok || String(result.success) !== "true") {
+      throw new Error(result.message || "Failed to submit contact form");
     }
 
     return { success: true };
