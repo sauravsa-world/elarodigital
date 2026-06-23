@@ -15,10 +15,10 @@ export function LeadForm() {
 
     try {
       await submitContactForm({ data: payload as Parameters<typeof submitContactForm>[0]["data"] });
-      toast.success("Thank you! We'll reach out within 24 hours.");
+      toast.success("Thank you! Your details have been sent to elarodigitalagency@gmail.com.");
       (e.target as HTMLFormElement).reset();
     } catch (err) {
-      toast.error("Something went wrong. Please try again or WhatsApp us directly.");
+      toast.error("Something went wrong. Please try again or email us at elarodigitalagency@gmail.com.");
     } finally {
       setLoading(false);
     }
@@ -49,7 +49,7 @@ export function LeadForm() {
           <form onSubmit={onSubmit} className="relative grid gap-4">
             <div className="grid sm:grid-cols-2 gap-4">
               <input required name="name" placeholder="Your name" className="rounded-2xl glass px-5 py-4 text-sm outline-none focus:ring-2 focus:ring-gold/40" />
-              <input required name="phone" type="tel" placeholder="Phone / WhatsApp" className="rounded-2xl glass px-5 py-4 text-sm outline-none focus:ring-2 focus:ring-gold/40" />
+              <input required name="phone" type="tel" placeholder="Phone number" className="rounded-2xl glass px-5 py-4 text-sm outline-none focus:ring-2 focus:ring-gold/40" />
             </div>
             <input required name="email" type="email" placeholder="Email address" className="rounded-2xl glass px-5 py-4 text-sm outline-none focus:ring-2 focus:ring-gold/40" />
             <input name="business" placeholder="Business name" className="rounded-2xl glass px-5 py-4 text-sm outline-none focus:ring-2 focus:ring-gold/40" />
@@ -67,6 +67,9 @@ export function LeadForm() {
             >
               {loading ? "Sending…" : <>Request my free audit <ArrowRight className="size-4" /></>}
             </button>
+            <p className="text-center text-xs text-muted-foreground">
+              Form details go directly to elarodigitalagency@gmail.com.
+            </p>
           </form>
         </div>
       </div>
