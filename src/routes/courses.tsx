@@ -5,9 +5,11 @@ import { ArrowRight, GraduationCap, Target, Search, MessageCircle } from "lucide
 export const Route = createFileRoute("/courses")({
   head: () => ({
     meta: [
-      { title: "Courses — Learn Digital Marketing | Elarodital" },
-      { name: "description", content: "Practical, no-fluff digital marketing courses by Elarodital — SEO, Meta Ads, Google Ads and WhatsApp Marketing taught by working practitioners." },
-      { property: "og:title", content: "Digital Marketing Courses — Elarodital" },
+      { title: "Digital Marketing Courses in Bihar | SEO, Google & Meta Ads" },
+      { name: "description", content: "Learn digital marketing in Bihar with Elaro Digital — practical SEO, Meta Ads, Google Ads and WhatsApp Marketing courses for students and business owners in Patna, Gaya, Muzaffarpur, Darbhanga and Bhagalpur." },
+      { name: "keywords", content: "digital marketing course Bihar, digital marketing course Patna, SEO course Gaya, Google Ads course Bihar, Meta Ads training Patna" },
+      { property: "og:title", content: "Digital Marketing Courses in Bihar — Elaro Digital" },
+      { property: "og:description", content: "Cohort-based, project-driven digital marketing courses for Bihar." },
       { property: "og:url", content: "/courses" },
     ],
     links: [{ rel: "canonical", href: "/courses" }],
