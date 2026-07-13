@@ -7,10 +7,11 @@ import { motion } from "framer-motion";
 export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
-      { title: "Services — SEO, Ads, Web & App Development | Elarodital" },
-      { name: "description", content: "Explore Elarodital's full-service offering: SEO, Local SEO, Social Media Marketing, Meta Ads, Google Ads, Website & App Development, Graphic Design, WhatsApp Marketing and Lead Generation." },
-      { property: "og:title", content: "Digital Marketing Services — Elarodital" },
-      { property: "og:description", content: "End-to-end digital marketing services for growing Indian businesses." },
+      { title: "Digital Marketing Services in Bihar | SEO, Ads, Web & Apps" },
+      { name: "description", content: "Elaro Digital services in Bihar — Local SEO, Google Ads, Meta Ads, Social Media Marketing, Website & App Development, Graphic Design, WhatsApp Marketing and Lead Generation for businesses in Patna, Gaya, Muzaffarpur, Darbhanga, Bhagalpur and Purnia." },
+      { name: "keywords", content: "digital marketing services Bihar, SEO services Patna, Google Ads agency Bihar, website development Gaya, app development Bihar, WhatsApp marketing Patna" },
+      { property: "og:title", content: "Digital Marketing Services in Bihar — Elaro Digital" },
+      { property: "og:description", content: "Full-service digital marketing for businesses across Bihar." },
       { property: "og:url", content: "/services" },
     ],
     links: [{ rel: "canonical", href: "/services" }],

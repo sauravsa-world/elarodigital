@@ -4,9 +4,11 @@ import { PageShell, PageHero } from "@/components/site/PageShell";
 export const Route = createFileRoute("/blog")({
   head: () => ({
     meta: [
-      { title: "Blog — Digital Marketing Insights | Elarodital" },
-      { name: "description", content: "Articles on SEO, paid ads, social media and growth from the Elarodital team." },
-      { property: "og:title", content: "Elarodital Blog" },
+      { title: "Blog | Digital Marketing Insights for Bihar Businesses" },
+      { name: "description", content: "SEO, Google Ads, Meta Ads and growth articles from Elaro Digital — practical marketing insights for businesses in Patna, Gaya and across Bihar." },
+      { name: "keywords", content: "digital marketing blog Bihar, SEO tips Patna, Google Ads guide Bihar, marketing blog Gaya" },
+      { property: "og:title", content: "Elaro Digital Blog — Marketing Insights for Bihar" },
+      { property: "og:description", content: "Deep-dives on SEO, ads and brand growth from a Bihar-based agency." },
       { property: "og:url", content: "/blog" },
     ],
     links: [{ rel: "canonical", href: "/blog" }],

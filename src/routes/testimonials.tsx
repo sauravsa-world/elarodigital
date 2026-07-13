@@ -6,9 +6,11 @@ import { LeadForm } from "@/components/site/LeadForm";
 export const Route = createFileRoute("/testimonials")({
   head: () => ({
     meta: [
-      { title: "Testimonials — What Clients Say About Elarodital" },
-      { name: "description", content: "Real testimonials from school directors, coaching institutes, real estate, retail and D2C clients across India." },
-      { property: "og:title", content: "Client Testimonials — Elarodital" },
+      { title: "Client Testimonials | Elaro Digital Marketing Agency Bihar" },
+      { name: "description", content: "Read testimonials from schools, coaching institutes, real estate, clinics and retail brands across Patna, Gaya, Muzaffarpur and Bihar who grew with Elaro Digital." },
+      { name: "keywords", content: "digital marketing agency reviews Bihar, Elaro Digital testimonials, SEO agency reviews Patna, marketing agency reviews Gaya" },
+      { property: "og:title", content: "Client Testimonials — Elaro Digital, Bihar" },
+      { property: "og:description", content: "Trusted by 200+ growing businesses across Bihar and India." },
       { property: "og:url", content: "/testimonials" },
     ],
     links: [{ rel: "canonical", href: "/testimonials" }],

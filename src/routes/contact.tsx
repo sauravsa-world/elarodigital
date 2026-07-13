@@ -6,9 +6,11 @@ import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Get a Free Marketing Audit | Elarodital" },
-      { name: "description", content: "Get in touch with Elarodital for a free digital marketing audit. SEO, ads, websites and lead generation across Bihar and India." },
-      { property: "og:title", content: "Contact Elarodital" },
+      { title: "Contact Elaro Digital | Digital Marketing Agency in Gaya, Bihar" },
+      { name: "description", content: "Contact Elaro Digital in Powerganj, Bairagi, Gaya, Bihar. Call +91 94310 11994 or WhatsApp for a free digital marketing audit — SEO, ads, websites and lead generation across Patna, Gaya, Muzaffarpur, Darbhanga, Bhagalpur and Purnia." },
+      { name: "keywords", content: "contact digital marketing agency Bihar, marketing agency Gaya contact, SEO company Patna contact, WhatsApp marketing Bihar" },
+      { property: "og:title", content: "Contact Elaro Digital — Marketing Agency in Gaya, Bihar" },
+      { property: "og:description", content: "Call, WhatsApp or email Elaro Digital for a free marketing audit across Bihar." },
       { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
