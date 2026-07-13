@@ -8,9 +8,10 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Elarodital | Digital Marketing Agency in Bihar" },
-      { name: "description", content: "Meet Elarodital — a Bihar-based premium digital marketing agency on a mission to grow ambitious Indian businesses with SEO, ads, websites and lead generation." },
-      { property: "og:title", content: "About Elarodital" },
-      { property: "og:description", content: "A premium, performance-first digital marketing agency from Bihar, India." },
+      { name: "description", content: "About Elaro Digital — a Gaya, Bihar based digital marketing agency serving Patna, Muzaffarpur, Darbhanga, Bhagalpur and Purnia with SEO, ads, websites and lead generation for local businesses." },
+      { name: "keywords", content: "digital marketing agency Bihar, digital marketing company Gaya, marketing agency Patna, about Elaro Digital" },
+      { property: "og:title", content: "About Elaro Digital | Marketing Agency in Gaya, Bihar" },
+      { property: "og:description", content: "Gaya-based digital marketing team helping Bihar businesses grow with SEO, Google Ads, Meta Ads and websites." },
       { property: "og:url", content: "/about" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
