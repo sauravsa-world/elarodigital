@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://elarodigital.lovable.app/sitemap.xml
