@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Facebook, Linkedin, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Facebook, Linkedin, Youtube, Mail, Phone, MapPin, type LucideIcon } from "lucide-react";
 import logo from "@/assets/logo.png.asset.json";
 import { services } from "@/data/services";
 
@@ -16,14 +16,21 @@ export function Footer() {
               Elarodital is a premium digital marketing agency in Bihar building brands, websites and lead-generation systems that drive measurable growth.
             </p>
             <div className="mt-6 flex gap-2">
-              {[Instagram, Facebook, Linkedin, Youtube].map((Icon, i) => (
+              {([
+                { Icon: Instagram, label: "Follow Elaro Digital on Instagram", href: "https://www.instagram.com/elarodigital" },
+                { Icon: Facebook, label: "Follow Elaro Digital on Facebook", href: "https://www.facebook.com/elarodigital" },
+                { Icon: Linkedin, label: "Connect with Elaro Digital on LinkedIn", href: "https://www.linkedin.com/company/elarodigital" },
+                { Icon: Youtube, label: "Subscribe to Elaro Digital on YouTube", href: "https://www.youtube.com/@elarodigital" },
+              ] as { Icon: LucideIcon; label: string; href: string }[]).map(({ Icon, label, href }) => (
                 <a
-                  key={i}
-                  href="#"
-                  aria-label="Social link"
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={label}
                   className="grid place-items-center size-10 rounded-full glass hover:text-gold transition"
                 >
-                  <Icon className="size-4" />
+                  <Icon className="size-4" aria-hidden="true" />
                 </a>
               ))}
             </div>

@@ -1,0 +1,28 @@
+# Elaro Digital
+
+> Digital marketing agency in Bihar delivering SEO, Meta Ads, Google Ads, website development and lead generation for local and pan-India businesses.
+
+Elaro Digital is headquartered in Gaya, Bihar and serves clients across Patna, Muzaffarpur, Darbhanga, Bhagalpur, Purnia and all India.
+
+## Pages
+
+- [Home](/): Overview of services, results and industries served.
+- [About](/about): Team, mission and approach.
+- [Services](/services): Full list of digital marketing services.
+- [Portfolio](/portfolio): Case studies and client results.
+- [Testimonials](/testimonials): Client reviews.
+- [Courses](/courses): Digital marketing courses for students and business owners.
+- [Blog](/blog): SEO, ads and growth articles.
+- [Contact](/contact): Phone, WhatsApp, email and office address.
+
+## Services
+
+- [SEO Services](/services/seo-services): Technical, on-page and Local SEO.
+- [Social Media Marketing](/services/social-media-marketing): Instagram, Facebook, LinkedIn and YouTube.
+- [Meta Ads](/services/meta-ads): Facebook and Instagram advertising.
+- [Google Ads](/services/google-ads): Search, Performance Max, YouTube and Shopping.
+- [Website Development](/services/website-development): Business sites, ecommerce and landing pages.
+- [App Development](/services/app-development): Android, iOS and Flutter apps.
+- [Graphic Design](/services/graphic-design): Branding and marketing creatives.
+- [WhatsApp Marketing](/services/whatsapp-marketing): Broadcasts, automation and Click-to-WhatsApp ads.
+- [Lead Generation](/services/lead-generation): Landing pages, funnels and CRM integration.

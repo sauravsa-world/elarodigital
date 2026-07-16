@@ -8,7 +8,7 @@ export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
       { title: "Digital Marketing Services in Bihar | SEO, Ads, Web & Apps" },
-      { name: "description", content: "Elaro Digital services in Bihar — Local SEO, Google Ads, Meta Ads, Social Media Marketing, Website & App Development, Graphic Design, WhatsApp Marketing and Lead Generation for businesses in Patna, Gaya, Muzaffarpur, Darbhanga, Bhagalpur and Purnia." },
+      { name: "description", content: "Elaro Digital services — Local SEO, Google Ads, Meta Ads, websites, apps, WhatsApp marketing and lead generation for Bihar businesses." },
       { name: "keywords", content: "digital marketing services Bihar, SEO services Patna, Google Ads agency Bihar, website development Gaya, app development Bihar, WhatsApp marketing Patna" },
       { property: "og:title", content: "Digital Marketing Services in Bihar — Elaro Digital" },
       { property: "og:description", content: "Full-service digital marketing for businesses across Bihar." },

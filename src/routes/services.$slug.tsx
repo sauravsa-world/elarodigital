@@ -243,7 +243,7 @@ const details: Record<string, Detail> = {
     ],
   },
   "website-development": {
-    metaTitle: "Website Development Company in Bihar | Web Design Patna India",
+    metaTitle: "Website Development Company in Bihar | Web Design Patna",
     metaDescription:
       "Premium website development services in Bihar. Custom business websites, ecommerce stores, WordPress and high-converting landing pages built for speed and SEO.",
     h1: "Website Development Services",
