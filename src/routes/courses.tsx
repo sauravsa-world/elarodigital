@@ -39,7 +39,7 @@ function CoursesPage() {
             return (
               <div key={c.t} className="rounded-3xl glass p-7">
                 <Icon className="size-6 text-gold" />
-                <h3 className="mt-5 text-xl font-medium">{c.t}</h3>
+                <h2 className="mt-5 text-xl font-medium">{c.t}</h2>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{c.d}</p>
               </div>
             );
