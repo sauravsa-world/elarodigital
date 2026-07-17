@@ -5,7 +5,7 @@ import { services } from "@/data/services";
 
 export function Footer() {
   return (
-    <footer className="relative mt-32 border-t border-white/5">
+    <footer className="relative mt-32 border-t border-border bg-white">
       <div className="mx-auto max-w-7xl px-4 pt-20 pb-10">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
@@ -28,7 +28,7 @@ export function Footer() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={label}
-                  className="grid place-items-center size-10 rounded-full glass hover:text-gold transition"
+                  className="grid place-items-center size-10 rounded-full border border-border bg-white hover:text-brand transition"
                 >
                   <Icon className="size-4" aria-hidden="true" />
                 </a>
@@ -37,7 +37,7 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h3 className="text-sm font-medium tracking-wider uppercase text-gold">Services</h3>
+            <h3 className="text-sm font-semibold tracking-wider uppercase text-foreground">Services</h3>
             <ul className="mt-5 space-y-2.5 text-sm text-muted-foreground">
               {services.slice(0, 6).map((s) => (
                 <li key={s.slug}>
@@ -54,7 +54,7 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-2">
-            <h3 className="text-sm font-medium tracking-wider uppercase text-gold">Company</h3>
+            <h3 className="text-sm font-semibold tracking-wider uppercase text-foreground">Company</h3>
             <ul className="mt-5 space-y-2.5 text-sm text-muted-foreground">
               <li><Link to="/about" className="hover:text-foreground transition">About</Link></li>
               <li><Link to="/portfolio" className="hover:text-foreground transition">Portfolio</Link></li>
@@ -66,7 +66,7 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h3 className="text-sm font-medium tracking-wider uppercase text-gold">Get in touch</h3>
+            <h3 className="text-sm font-semibold tracking-wider uppercase text-foreground">Get in touch</h3>
             <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-3"><Phone className="size-4 mt-0.5 text-gold" /> <a href="tel:+919431011994" className="hover:text-foreground">+91 94310 11994 (WhatsApp)</a></li>
               <li className="flex items-start gap-3"><Mail className="size-4 mt-0.5 text-gold" /> <a href="mailto:elarodigitalagency@gmail.com" className="hover:text-foreground">elarodigitalagency@gmail.com</a></li>
@@ -75,7 +75,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
+        <div className="mt-14 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
           <p>© {new Date().getFullYear()} Elarodital. All rights reserved.</p>
           <p>Crafted in Bihar · Built for growth</p>
         </div>

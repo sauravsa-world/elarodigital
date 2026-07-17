@@ -24,11 +24,11 @@ export function ServicesGrid() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.5, delay: (i % 3) * 0.06 }}
-                className="group relative overflow-hidden rounded-3xl glass p-7 hover:border-gold/40 transition-all duration-500"
+                className="group relative overflow-hidden rounded-2xl bg-white border border-border p-6 hover:border-brand/60 hover:shadow-[0_20px_50px_-25px_rgba(79,70,229,0.35)] transition-all duration-500"
               >
-                <div className="absolute -top-24 -right-24 size-56 rounded-full bg-gold/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="absolute -top-24 -right-24 size-56 rounded-full bg-indigo-100 blur-3xl opacity-0 group-hover:opacity-70 transition-opacity duration-700" />
                 <div className="relative">
-                  <div className="mb-6 overflow-hidden rounded-2xl ring-1 ring-white/5">
+                  <div className="mb-6 overflow-hidden rounded-xl border border-border">
                     <img
                       src={s.image}
                       alt={`${s.title} preview`}
@@ -38,15 +38,15 @@ export function ServicesGrid() {
                       className="aspect-[16/10] w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
-                  <div className="grid place-items-center size-12 rounded-2xl bg-gold/10 text-gold ring-1 ring-gold/20">
+                  <div className="grid place-items-center size-12 rounded-xl bg-indigo-50 text-brand ring-1 ring-indigo-100">
                     <Icon className="size-5" />
                   </div>
-                  <h3 className="mt-6 text-xl font-medium">{s.title}</h3>
+                  <h3 className="mt-6 text-lg font-bold text-foreground">{s.title}</h3>
                   <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.short}</p>
                   <Link
                     to="/services/$slug"
                     params={{ slug: s.slug }}
-                    className="mt-6 inline-flex items-center gap-1 text-sm text-gold hover:gap-2 transition-all"
+                    className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-brand hover:gap-2 transition-all"
                   >
                     Learn more <ArrowUpRight className="size-4" />
                   </Link>

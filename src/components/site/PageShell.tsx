@@ -22,15 +22,15 @@ export function PageHero({
   description?: string;
 }) {
   return (
-    <section className="relative py-20 sm:py-28 text-center">
-      <div className="absolute inset-0 radial-gold opacity-70 pointer-events-none" />
+    <section className="relative py-20 sm:py-28 text-center border-b border-border bg-white">
+      <div className="absolute inset-0 radial-gold opacity-90 pointer-events-none" />
       <div className="relative mx-auto max-w-4xl px-4">
         {eyebrow ? (
-          <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold">
+          <div className="inline-flex items-center gap-2 rounded-full bg-indigo-50 border border-indigo-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-brand">
             {eyebrow}
           </div>
         ) : null}
-        <h1 className="mt-6 text-5xl sm:text-6xl font-medium leading-[1.05]">{title}</h1>
+        <h1 className="mt-6 font-display font-bold text-4xl sm:text-6xl leading-[1.05] tracking-tight">{title}</h1>
         {description ? (
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">{description}</p>
         ) : null}
