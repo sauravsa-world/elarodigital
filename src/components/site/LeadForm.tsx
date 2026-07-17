@@ -55,16 +55,16 @@ export function LeadForm() {
   }
 
   return (
-    <section id="contact" className="relative py-28 sm:py-36">
+    <section id="contact" className="relative py-24 sm:py-32 bg-slate-50">
       <div className="mx-auto max-w-6xl px-4">
-        <div className="relative overflow-hidden rounded-[2rem] glass-strong p-8 sm:p-14 grid lg:grid-cols-2 gap-12">
-          <div aria-hidden className="absolute -top-32 -left-32 size-[420px] rounded-full bg-gold/15 blur-[120px]" />
+        <div className="relative overflow-hidden rounded-3xl bg-white border border-border p-8 sm:p-14 grid lg:grid-cols-2 gap-12 shadow-[0_25px_60px_-30px_rgba(15,23,42,0.2)]">
+          <div aria-hidden className="absolute -top-32 -left-32 size-[420px] rounded-full bg-indigo-100 blur-[120px]" />
           <div className="relative">
-            <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold">
+            <div className="inline-flex items-center gap-2 rounded-full bg-indigo-50 border border-indigo-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-brand">
               Free Marketing Audit
             </div>
-            <h2 className="mt-5 text-4xl sm:text-5xl font-medium leading-[1.05]">
-              Let's grow your business — <span className="gold-gradient-text italic">together</span>.
+            <h2 className="mt-5 font-display text-4xl sm:text-5xl font-bold leading-[1.05] tracking-tight">
+              Let's grow your business — <span className="italic text-brand">together</span>.
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed max-w-md">
               Tell us about your business and goals. We'll send back a free 15-minute strategy plan within 24 hours — no obligations, no pushy sales.
