@@ -55,16 +55,16 @@ export function LeadForm() {
   }
 
   return (
-    <section id="contact" className="relative py-28 sm:py-36">
+    <section id="contact" className="relative py-24 sm:py-32 bg-slate-50">
       <div className="mx-auto max-w-6xl px-4">
-        <div className="relative overflow-hidden rounded-[2rem] glass-strong p-8 sm:p-14 grid lg:grid-cols-2 gap-12">
-          <div aria-hidden className="absolute -top-32 -left-32 size-[420px] rounded-full bg-gold/15 blur-[120px]" />
+        <div className="relative overflow-hidden rounded-3xl bg-white border border-border p-8 sm:p-14 grid lg:grid-cols-2 gap-12 shadow-[0_25px_60px_-30px_rgba(15,23,42,0.2)]">
+          <div aria-hidden className="absolute -top-32 -left-32 size-[420px] rounded-full bg-indigo-100 blur-[120px]" />
           <div className="relative">
-            <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold">
+            <div className="inline-flex items-center gap-2 rounded-full bg-indigo-50 border border-indigo-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-brand">
               Free Marketing Audit
             </div>
-            <h2 className="mt-5 text-4xl sm:text-5xl font-medium leading-[1.05]">
-              Let's grow your business — <span className="gold-gradient-text italic">together</span>.
+            <h2 className="mt-5 font-display text-4xl sm:text-5xl font-bold leading-[1.05] tracking-tight">
+              Let's grow your business — <span className="italic text-brand">together</span>.
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed max-w-md">
               Tell us about your business and goals. We'll send back a free 15-minute strategy plan within 24 hours — no obligations, no pushy sales.
@@ -78,22 +78,22 @@ export function LeadForm() {
 
           <form onSubmit={onSubmit} className="relative grid gap-4">
             <div className="grid sm:grid-cols-2 gap-4">
-              <input required name="name" aria-label="Your name" placeholder="Your name" className="rounded-2xl glass px-5 py-4 text-sm outline-none focus:ring-2 focus:ring-gold/40" />
-              <input required name="phone" type="tel" aria-label="Phone number" placeholder="Phone number" className="rounded-2xl glass px-5 py-4 text-sm outline-none focus:ring-2 focus:ring-gold/40" />
+              <input required name="name" aria-label="Your name" placeholder="Your name" className="rounded-xl bg-slate-50 border border-border px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-[color:var(--ring)]" />
+              <input required name="phone" type="tel" aria-label="Phone number" placeholder="Phone number" className="rounded-xl bg-slate-50 border border-border px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-[color:var(--ring)]" />
             </div>
-            <input required name="email" type="email" aria-label="Email address" placeholder="Email address" className="rounded-2xl glass px-5 py-4 text-sm outline-none focus:ring-2 focus:ring-gold/40" />
-            <input name="business" aria-label="Business name" placeholder="Business name" className="rounded-2xl glass px-5 py-4 text-sm outline-none focus:ring-2 focus:ring-gold/40" />
-            <select name="service" aria-label="Service you're interested in" defaultValue="" className="rounded-2xl glass px-5 py-4 text-sm outline-none focus:ring-2 focus:ring-gold/40">
+            <input required name="email" type="email" aria-label="Email address" placeholder="Email address" className="rounded-xl bg-slate-50 border border-border px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-[color:var(--ring)]" />
+            <input name="business" aria-label="Business name" placeholder="Business name" className="rounded-xl bg-slate-50 border border-border px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-[color:var(--ring)]" />
+            <select name="service" aria-label="Service you're interested in" defaultValue="" className="rounded-xl bg-slate-50 border border-border px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-[color:var(--ring)]">
               <option value="" disabled>Service interested in</option>
               {services.map((s) => (
-                <option key={s.slug} value={s.title} className="bg-surface text-foreground">{s.title}</option>
+                <option key={s.slug} value={s.title} >{s.title}</option>
               ))}
             </select>
-            <textarea name="message" aria-label="Tell us about your goals" placeholder="Tell us a bit about your goals..." rows={4} className="rounded-2xl glass px-5 py-4 text-sm outline-none focus:ring-2 focus:ring-gold/40 resize-none" />
+            <textarea name="message" aria-label="Tell us about your goals" placeholder="Tell us a bit about your goals..." rows={4} className="rounded-xl bg-slate-50 border border-border px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-[color:var(--ring)] resize-none" />
             <button
               type="submit"
               disabled={loading}
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-4 text-sm font-medium text-primary-foreground shadow-glow hover:opacity-95 transition disabled:opacity-60"
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-brand px-6 py-4 text-sm font-bold text-primary-foreground shadow-glow hover:opacity-95 transition disabled:opacity-60"
             >
               {loading ? "Sending…" : <>Request my free audit <ArrowRight className="size-4" /></>}
             </button>

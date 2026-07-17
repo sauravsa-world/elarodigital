@@ -42,9 +42,9 @@ function ServicesPage() {
                 <Link
                   to="/services/$slug"
                   params={{ slug: s.slug }}
-                  className="group block rounded-3xl glass p-8 hover:border-gold/40 transition h-full"
+                  className="group block rounded-3xl glass p-8 hover:border-brand/50 transition h-full"
                 >
-                  <div className="mb-6 overflow-hidden rounded-2xl ring-1 ring-white/5">
+                  <div className="mb-6 overflow-hidden rounded-2xl ring-1 ring-border">
                     <img
                       src={s.image}
                       alt={`${s.title} preview`}
@@ -55,13 +55,13 @@ function ServicesPage() {
                     />
                   </div>
                   <div className="flex items-start gap-5">
-                    <div className="shrink-0 grid place-items-center size-14 rounded-2xl bg-gold/10 text-gold ring-1 ring-gold/20">
+                    <div className="shrink-0 grid place-items-center size-14 rounded-2xl bg-indigo-50 text-brand ring-1 ring-indigo-100">
                       <Icon className="size-6" />
                     </div>
                     <div className="flex-1">
-                      <h2 className="text-2xl font-medium group-hover:text-gold transition">{s.title}</h2>
+                      <h2 className="text-2xl font-medium group-hover:text-brand transition">{s.title}</h2>
                       <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.short}</p>
-                      <span className="mt-5 inline-flex items-center gap-1 text-sm text-gold">
+                      <span className="mt-5 inline-flex items-center gap-1 text-sm text-brand">
                         View details →
                       </span>
                     </div>
