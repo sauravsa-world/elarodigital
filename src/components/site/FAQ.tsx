@@ -10,8 +10,8 @@ export function FAQ() {
         <div className="mt-12 rounded-3xl glass p-2 sm:p-4">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((f, i) => (
-              <AccordionItem key={i} value={`item-${i}`} className="border-white/5 last:border-0">
-                <AccordionTrigger className="px-4 py-5 text-left text-base font-medium hover:no-underline hover:text-gold">
+              <AccordionItem key={i} value={`item-${i}`} className="border-border last:border-0">
+                <AccordionTrigger className="px-4 py-5 text-left text-base font-medium hover:no-underline hover:text-brand">
                   {f.q}
                 </AccordionTrigger>
                 <AccordionContent className="px-4 pb-5 text-sm text-muted-foreground leading-relaxed">
