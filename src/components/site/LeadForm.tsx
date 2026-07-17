@@ -78,22 +78,22 @@ export function LeadForm() {
 
           <form onSubmit={onSubmit} className="relative grid gap-4">
             <div className="grid sm:grid-cols-2 gap-4">
-              <input required name="name" aria-label="Your name" placeholder="Your name" className="rounded-2xl glass px-5 py-4 text-sm outline-none focus:ring-2 focus:ring-gold/40" />
-              <input required name="phone" type="tel" aria-label="Phone number" placeholder="Phone number" className="rounded-2xl glass px-5 py-4 text-sm outline-none focus:ring-2 focus:ring-gold/40" />
+              <input required name="name" aria-label="Your name" placeholder="Your name" className="rounded-xl bg-slate-50 border border-border px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-[color:var(--ring)]" />
+              <input required name="phone" type="tel" aria-label="Phone number" placeholder="Phone number" className="rounded-xl bg-slate-50 border border-border px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-[color:var(--ring)]" />
             </div>
-            <input required name="email" type="email" aria-label="Email address" placeholder="Email address" className="rounded-2xl glass px-5 py-4 text-sm outline-none focus:ring-2 focus:ring-gold/40" />
-            <input name="business" aria-label="Business name" placeholder="Business name" className="rounded-2xl glass px-5 py-4 text-sm outline-none focus:ring-2 focus:ring-gold/40" />
-            <select name="service" aria-label="Service you're interested in" defaultValue="" className="rounded-2xl glass px-5 py-4 text-sm outline-none focus:ring-2 focus:ring-gold/40">
+            <input required name="email" type="email" aria-label="Email address" placeholder="Email address" className="rounded-xl bg-slate-50 border border-border px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-[color:var(--ring)]" />
+            <input name="business" aria-label="Business name" placeholder="Business name" className="rounded-xl bg-slate-50 border border-border px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-[color:var(--ring)]" />
+            <select name="service" aria-label="Service you're interested in" defaultValue="" className="rounded-xl bg-slate-50 border border-border px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-[color:var(--ring)]">
               <option value="" disabled>Service interested in</option>
               {services.map((s) => (
-                <option key={s.slug} value={s.title} className="bg-surface text-foreground">{s.title}</option>
+                <option key={s.slug} value={s.title} >{s.title}</option>
               ))}
             </select>
-            <textarea name="message" aria-label="Tell us about your goals" placeholder="Tell us a bit about your goals..." rows={4} className="rounded-2xl glass px-5 py-4 text-sm outline-none focus:ring-2 focus:ring-gold/40 resize-none" />
+            <textarea name="message" aria-label="Tell us about your goals" placeholder="Tell us a bit about your goals..." rows={4} className="rounded-xl bg-slate-50 border border-border px-4 py-3.5 text-sm outline-none focus:ring-2 focus:ring-[color:var(--ring)] resize-none" />
             <button
               type="submit"
               disabled={loading}
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-4 text-sm font-medium text-primary-foreground shadow-glow hover:opacity-95 transition disabled:opacity-60"
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-brand px-6 py-4 text-sm font-bold text-primary-foreground shadow-glow hover:opacity-95 transition disabled:opacity-60"
             >
               {loading ? "Sending…" : <>Request my free audit <ArrowRight className="size-4" /></>}
             </button>
