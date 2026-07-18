@@ -3,8 +3,6 @@ import { Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/site/PageShell";
 import { Team } from "@/components/site/Team";
 import { LeadForm } from "@/components/site/LeadForm";
-import { Testimonials } from "@/components/site/Testimonials";
-import { services } from "@/data/services";
 import { testimonials } from "@/data/testimonials";
 import aboutHero from "@/assets/about-hero.jpg.asset.json";
 import {
