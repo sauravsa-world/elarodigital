@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { toast } from "sonner";
-import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle, Star, ShieldCheck } from "lucide-react";
 import { services } from "@/data/services";
 
@@ -60,44 +59,24 @@ export function Hero() {
       <div className="relative mx-auto max-w-7xl px-4 lg:px-6">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="space-y-7">
-            <motion.div
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-50 border border-indigo-100 rounded-full text-brand text-xs sm:text-sm font-semibold"
-            >
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-50 border border-indigo-100 rounded-full text-brand text-xs sm:text-sm font-semibold">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-brand" />
               </span>
               Bihar's Top-Rated Performance Agency
-            </motion.div>
+            </div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.05 }}
-              className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.05] tracking-tight"
-            >
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.05] tracking-tight">
               Grow your business in{" "}
               <span className="italic text-brand">Bihar &amp; India</span> with data-driven digital marketing.
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.12 }}
-              className="text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed"
-            >
+            <p className="text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
               We help coaching institutes, real estate builders, clinics, D2C brands and local businesses in Patna, Gaya, Muzaffarpur and across India generate more leads through SEO, Meta Ads, Google Ads and high-converting websites.
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.18 }}
-              className="flex flex-col sm:flex-row gap-3"
-            >
+            <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
@@ -112,14 +91,9 @@ export function Hero() {
               >
                 View Our Services <ArrowRight className="size-4" />
               </a>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="pt-4 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground"
-            >
+            <div className="pt-4 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <div className="flex">
                   {Array.from({ length: 5 }).map((_, i) => (
@@ -133,15 +107,10 @@ export function Hero() {
               <div className="flex items-center gap-2">
                 <ShieldCheck className="size-4 text-brand" /> ₹50M+ ad spend managed
               </div>
-            </motion.div>
+            </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="relative"
-          >
+          <div className="relative">
             <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-[0_25px_70px_-25px_rgba(15,23,42,0.25)] border border-border relative">
               <div className="absolute -top-4 -left-4 bg-brand text-white text-[11px] font-bold px-3 py-1.5 rounded-full tracking-wider">
                 GET 2X LEADS
@@ -187,7 +156,7 @@ export function Hero() {
                 </p>
               </form>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
