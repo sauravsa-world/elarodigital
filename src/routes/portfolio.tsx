@@ -12,9 +12,9 @@ export const Route = createFileRoute("/portfolio")({
       { name: "keywords", content: "digital marketing case studies Bihar, SEO results Patna, Google Ads case study Gaya, marketing portfolio Bihar" },
       { property: "og:title", content: "Portfolio — Elaro Digital | Bihar Marketing Case Studies" },
       { property: "og:description", content: "Selected projects and campaigns from businesses across Bihar." },
-      { property: "og:url", content: "/portfolio" },
+      { property: "og:url", content: "https://elarodigital.lovable.app/portfolio" },
     ],
-    links: [{ rel: "canonical", href: "/portfolio" }],
+    links: [{ rel: "canonical", href: "https://elarodigital.lovable.app/portfolio" }],
   }),
   component: () => (
     <PageShell>

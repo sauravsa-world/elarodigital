@@ -9,9 +9,9 @@ export const Route = createFileRoute("/blog")({
       { name: "keywords", content: "digital marketing blog Bihar, SEO tips Patna, Google Ads guide Bihar, marketing blog Gaya" },
       { property: "og:title", content: "Elaro Digital Blog — Marketing Insights for Bihar" },
       { property: "og:description", content: "Deep-dives on SEO, ads and brand growth from a Bihar-based agency." },
-      { property: "og:url", content: "/blog" },
+      { property: "og:url", content: "https://elarodigital.lovable.app/blog" },
     ],
-    links: [{ rel: "canonical", href: "/blog" }],
+    links: [{ rel: "canonical", href: "https://elarodigital.lovable.app/blog" }],
   }),
   component: () => (
     <PageShell>

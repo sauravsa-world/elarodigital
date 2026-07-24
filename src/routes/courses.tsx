@@ -10,9 +10,9 @@ export const Route = createFileRoute("/courses")({
       { name: "keywords", content: "digital marketing course Bihar, digital marketing course Patna, SEO course Gaya, Google Ads course Bihar, Meta Ads training Patna" },
       { property: "og:title", content: "Digital Marketing Courses in Bihar — Elaro Digital" },
       { property: "og:description", content: "Cohort-based, project-driven digital marketing courses for Bihar." },
-      { property: "og:url", content: "/courses" },
+      { property: "og:url", content: "https://elarodigital.lovable.app/courses" },
     ],
-    links: [{ rel: "canonical", href: "/courses" }],
+    links: [{ rel: "canonical", href: "https://elarodigital.lovable.app/courses" }],
   }),
   component: CoursesPage,
 });
