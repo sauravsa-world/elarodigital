@@ -1,18 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { lazy, Suspense } from "react";
 import { Navbar } from "@/components/site/Navbar";
-import { Footer } from "@/components/site/Footer";
 import { Hero } from "@/components/site/Hero";
-import { StatsBar } from "@/components/site/StatsBar";
-import { ServicesGrid } from "@/components/site/ServicesGrid";
-import { WhyUs } from "@/components/site/WhyUs";
-import { Process } from "@/components/site/Process";
-import { Results } from "@/components/site/Results";
-import { Testimonials } from "@/components/site/Testimonials";
-import { Industries } from "@/components/site/Industries";
-import { Team } from "@/components/site/Team";
-import { FAQ } from "@/components/site/FAQ";
-import { LeadForm } from "@/components/site/LeadForm";
 import { faqs } from "@/data/faqs";
+
+const StatsBar = lazy(() => import("@/components/site/StatsBar").then(m => ({ default: m.StatsBar })));
+const ServicesGrid = lazy(() => import("@/components/site/ServicesGrid").then(m => ({ default: m.ServicesGrid })));
+const WhyUs = lazy(() => import("@/components/site/WhyUs").then(m => ({ default: m.WhyUs })));
+const Process = lazy(() => import("@/components/site/Process").then(m => ({ default: m.Process })));
+const Results = lazy(() => import("@/components/site/Results").then(m => ({ default: m.Results })));
+const Industries = lazy(() => import("@/components/site/Industries").then(m => ({ default: m.Industries })));
+const Testimonials = lazy(() => import("@/components/site/Testimonials").then(m => ({ default: m.Testimonials })));
+const Team = lazy(() => import("@/components/site/Team").then(m => ({ default: m.Team })));
+const FAQ = lazy(() => import("@/components/site/FAQ").then(m => ({ default: m.FAQ })));
+const LeadForm = lazy(() => import("@/components/site/LeadForm").then(m => ({ default: m.LeadForm })));
+const Footer = lazy(() => import("@/components/site/Footer").then(m => ({ default: m.Footer })));
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -49,18 +51,22 @@ function Index() {
       <Navbar />
       <main>
         <Hero />
-        <StatsBar />
-        <ServicesGrid />
-        <WhyUs />
-        <Process />
-        <Results />
-        <Industries />
-        <Testimonials />
-        <Team />
-        <FAQ />
-        <LeadForm />
+        <Suspense fallback={null}>
+          <StatsBar />
+          <ServicesGrid />
+          <WhyUs />
+          <Process />
+          <Results />
+          <Industries />
+          <Testimonials />
+          <Team />
+          <FAQ />
+          <LeadForm />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </div>
   );
 }
