@@ -11,9 +11,9 @@ export const Route = createFileRoute("/contact")({
       { name: "keywords", content: "contact digital marketing agency Bihar, marketing agency Gaya contact, SEO company Patna contact, WhatsApp marketing Bihar" },
       { property: "og:title", content: "Contact Elaro Digital — Marketing Agency in Gaya, Bihar" },
       { property: "og:description", content: "Call, WhatsApp or email Elaro Digital for a free marketing audit across Bihar." },
-      { property: "og:url", content: "/contact" },
+      { property: "og:url", content: "https://elarodigital.lovable.app/contact" },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: "https://elarodigital.lovable.app/contact" }],
   }),
   component: ContactPage,
 });

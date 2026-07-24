@@ -11,9 +11,9 @@ export const Route = createFileRoute("/testimonials")({
       { name: "keywords", content: "digital marketing agency reviews Bihar, Elaro Digital testimonials, SEO agency reviews Patna, marketing agency reviews Gaya" },
       { property: "og:title", content: "Client Testimonials — Elaro Digital, Bihar" },
       { property: "og:description", content: "Trusted by 200+ growing businesses across Bihar and India." },
-      { property: "og:url", content: "/testimonials" },
+      { property: "og:url", content: "https://elarodigital.lovable.app/testimonials" },
     ],
-    links: [{ rel: "canonical", href: "/testimonials" }],
+    links: [{ rel: "canonical", href: "https://elarodigital.lovable.app/testimonials" }],
   }),
   component: () => (
     <PageShell>

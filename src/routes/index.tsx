@@ -24,9 +24,9 @@ export const Route = createFileRoute("/")({
       { name: "keywords", content: "Digital Marketing Agency in Bihar, Digital Marketing Company in Patna, SEO Services Bihar, SEO Agency Patna, Google Ads Bihar, Meta Ads Bihar, Social Media Marketing Patna, Website Development Bihar, App Development Bihar, WhatsApp Marketing, Lead Generation Bihar, Muzaffarpur, Gaya, Darbhanga, Bhagalpur, Purnia" },
       { property: "og:title", content: "Digital Marketing Agency in Bihar & India | ElaroDigital" },
       { property: "og:description", content: "Results-driven SEO, ads, websites and lead generation for businesses across Bihar and India." },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://elarodigital.lovable.app" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://elarodigital.lovable.app" }],
     scripts: [
       {
         type: "application/ld+json",
