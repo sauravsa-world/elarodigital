@@ -92,7 +92,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:description", content: "Results-driven SEO, ads, websites and lead generation for businesses across Bihar and India." },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/hgGQFntifjMMefGsvzyoWEfWwa32/social-images/social-1782043893977-ChatGPT_Image_Jun_21,_2026,_05_40_15_PM.webp" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/hgGQFntifjMMefGsvzyoWEfWwa32/social-images/social-1782043893977-ChatGPT_Image_Jun_21,_2026,_05_40_15_PM.webp" },
-      { name: "google-site-verification", content: "yNbHtrM-nzLXbKLoAujC-ORONFMJIT-_IKsUPkbw2zg" },
+   { name: "google-site-verification", content: "UAn1TLiB7HZ12OkEgWFCkeGz8hKaJOurDsT1kWkZRcM" },
     ],
     links: [
       {
