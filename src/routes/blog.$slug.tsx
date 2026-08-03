@@ -6,6 +6,7 @@ import { BlogCover } from "@/components/blog/BlogCover";
 import { Breadcrumbs, CtaBanner, Newsletter, SocialShare } from "@/components/blog/BlogWidgets";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getPost, relatedPosts } from "@/data/blog";
+import type { BlogPost } from "@/data/blog/types";
 import { getCategory } from "@/data/blog/categories";
 import { getAuthor } from "@/data/blog/authors";
 
@@ -114,7 +115,7 @@ function estimateWords(post: { intro: string[]; sections: { paragraphs?: string[
 }
 
 function BlogArticle() {
-  const { post } = Route.useLoaderData();
+  const post = Route.useLoaderData().post as BlogPost;
   const author = getAuthor(post.authorId);
   const category = getCategory(post.category);
   const related = relatedPosts(post, 3);
