@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { services } from "@/data/services";
+import { blogPosts, blogCategories } from "@/data/blog";
 
 const BASE_URL = "https://elarodigital.lovable.app";
 
@@ -8,6 +9,7 @@ interface SitemapEntry {
   path: string;
   changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
   priority?: string;
+  lastmod?: string;
 }
 
 export const Route = createFileRoute("/sitemap.xml")({
@@ -28,12 +30,24 @@ export const Route = createFileRoute("/sitemap.xml")({
             changefreq: "monthly" as const,
             priority: "0.8",
           })),
+          ...blogCategories.map((c) => ({
+            path: `/blog/category/${c.slug}`,
+            changefreq: "weekly" as const,
+            priority: "0.6",
+          })),
+          ...blogPosts.map((p) => ({
+            path: `/blog/${p.slug}`,
+            changefreq: "monthly" as const,
+            priority: p.pillar ? "0.8" : "0.7",
+            lastmod: p.updatedDate ?? p.publishDate,
+          })),
         ];
 
         const urls = entries.map((e) =>
           [
             `  <url>`,
             `    <loc>${BASE_URL}${e.path}</loc>`,
+            e.lastmod ? `    <lastmod>${e.lastmod}</lastmod>` : null,
             e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
             e.priority ? `    <priority>${e.priority}</priority>` : null,
             `  </url>`,
