@@ -83,7 +83,7 @@ export const Route = createFileRoute("/about")({
             name: "Elaro Digital Agency",
             url: "https://elarodigital.lovable.app",
             telephone: "+91-9431011994",
-            email: "info@elarodigital.lovable.app",
+            email: "elarodigitalagency@gmail.com",
             address: {
               "@type": "PostalAddress",
               streetAddress: "Powerganj, Bairagi",
