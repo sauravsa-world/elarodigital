@@ -12,8 +12,35 @@ export const Route = createFileRoute("/contact")({
       { property: "og:title", content: "Contact Elaro Digital — Marketing Agency in Gaya, Bihar" },
       { property: "og:description", content: "Call, WhatsApp or email Elaro Digital for a free marketing audit across Bihar." },
       { property: "og:url", content: "https://elarodigital.lovable.app/contact" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Contact Elaro Digital — Marketing Agency in Gaya, Bihar" },
+      { name: "twitter:description", content: "Call, WhatsApp or email Elaro Digital for a free marketing audit across Bihar." },
     ],
     links: [{ rel: "canonical", href: "https://elarodigital.lovable.app/contact" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          name: "Contact Elaro Digital",
+          url: "https://elarodigital.lovable.app/contact",
+          about: { "@id": "https://elarodigital.lovable.app/#organization" },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://elarodigital.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Contact", item: "https://elarodigital.lovable.app/contact" },
+          ],
+        }),
+      },
+    ],
   }),
   component: ContactPage,
 });
