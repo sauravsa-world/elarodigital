@@ -457,9 +457,17 @@ export const Route = createFileRoute("/services/$slug")({
     return { service, detail };
   },
   head: ({ loaderData, params }) => {
-    if (!loaderData) return { meta: [{ title: "Service — ElaroDigital" }] };
-    const { detail } = loaderData;
-    const url = `/services/${params.slug}`;
+    const SITE = "https://elarodigital.lovable.app";
+    if (!loaderData) {
+      return {
+        meta: [
+          { title: "Service unavailable | Elaro Digital" },
+          { name: "robots", content: "noindex" },
+        ],
+      };
+    }
+    const { detail, service } = loaderData;
+    const url = `${SITE}/services/${params.slug}`;
     return {
       meta: [
         { title: detail.metaTitle },
@@ -468,6 +476,9 @@ export const Route = createFileRoute("/services/$slug")({
         { property: "og:description", content: detail.metaDescription },
         { property: "og:url", content: url },
         { property: "og:type", content: "website" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: detail.metaTitle },
+        { name: "twitter:description", content: detail.metaDescription },
       ],
       links: [{ rel: "canonical", href: url }],
       scripts: [
@@ -481,6 +492,34 @@ export const Route = createFileRoute("/services/$slug")({
               name: f.q,
               acceptedAnswer: { "@type": "Answer", text: f.a },
             })),
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: service.title,
+            serviceType: service.title,
+            description: detail.metaDescription,
+            url,
+            provider: { "@id": `${SITE}/#organization` },
+            areaServed: [
+              { "@type": "State", name: "Bihar" },
+              { "@type": "Country", name: "India" },
+            ],
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+              { "@type": "ListItem", position: 2, name: "Services", item: `${SITE}/services` },
+              { "@type": "ListItem", position: 3, name: service.title, item: url },
+            ],
           }),
         },
       ],
