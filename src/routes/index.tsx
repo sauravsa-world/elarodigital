@@ -25,6 +25,10 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Digital Marketing Agency in Bihar & India | ElaroDigital" },
       { property: "og:description", content: "Results-driven SEO, ads, websites and lead generation for businesses across Bihar and India." },
       { property: "og:url", content: "https://elarodigital.lovable.app" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Digital Marketing Agency in Bihar & India | ElaroDigital" },
+      { name: "twitter:description", content: "Results-driven SEO, ads, websites and lead generation for businesses across Bihar and India." },
     ],
     links: [{ rel: "canonical", href: "https://elarodigital.lovable.app" }],
     scripts: [

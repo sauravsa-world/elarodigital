@@ -66,6 +66,8 @@ export const Route = createFileRoute("/about")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://elarodigital.lovable.app/about" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "About Elaro Digital — Digital Marketing Agency in Bihar" },
+      { name: "twitter:description", content: "Helping local businesses grow with SEO, Google Business Profile, websites, Meta & Google Ads and content marketing." },
     ],
     links: [{ rel: "canonical", href: "https://elarodigital.lovable.app/about" }],
     scripts: [
@@ -81,7 +83,7 @@ export const Route = createFileRoute("/about")({
             name: "Elaro Digital Agency",
             url: "https://elarodigital.lovable.app",
             telephone: "+91-9431011994",
-            email: "info@elarodigital.lovable.app",
+            email: "elarodigitalagency@gmail.com",
             address: {
               "@type": "PostalAddress",
               streetAddress: "Powerganj, Bairagi",

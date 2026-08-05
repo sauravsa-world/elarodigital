@@ -13,8 +13,39 @@ export const Route = createFileRoute("/services/")({
       { property: "og:title", content: "Digital Marketing Services in Bihar — Elaro Digital" },
       { property: "og:description", content: "Full-service digital marketing for businesses across Bihar." },
       { property: "og:url", content: "https://elarodigital.lovable.app/services" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Digital Marketing Services in Bihar — Elaro Digital" },
+      { name: "twitter:description", content: "Full-service digital marketing for businesses across Bihar." },
     ],
     links: [{ rel: "canonical", href: "https://elarodigital.lovable.app/services" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "Digital Marketing Services — Elaro Digital",
+          itemListElement: services.map((s, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: s.title,
+            url: `https://elarodigital.lovable.app/services/${s.slug}`,
+          })),
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://elarodigital.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Services", item: "https://elarodigital.lovable.app/services" },
+          ],
+        }),
+      },
+    ],
   }),
   component: ServicesPage,
 });
