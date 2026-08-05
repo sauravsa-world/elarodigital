@@ -25,7 +25,10 @@ export function Team() {
                 <img
                   src={m.image}
                   alt={`${m.name} — ${m.role}`}
+                  width={800}
+                  height={1000}
                   loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
