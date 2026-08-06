@@ -291,6 +291,8 @@ function AboutPage() {
                 alt="Business growth illustration showing rising bar chart — Elaro Digital marketing results"
                 width={1024}
                 height={1024}
+                decoding="async"
+                fetchPriority="high"
                 className="w-full h-auto rounded-2xl"
               />
               <div className="absolute -bottom-6 -left-6 rounded-2xl bg-white border border-border shadow-lg px-4 py-3">

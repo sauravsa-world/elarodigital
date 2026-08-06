@@ -65,6 +65,7 @@ export function BlogCard({ post, size = "md" }: { post: BlogPost; size?: "md" | 
             width={32}
             height={32}
             loading="lazy"
+            decoding="async"
             className="size-8 rounded-full object-cover"
           />
           <span className="text-xs font-medium text-foreground">{author.name}</span>

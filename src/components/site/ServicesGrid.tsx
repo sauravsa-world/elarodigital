@@ -35,6 +35,7 @@ export function ServicesGrid() {
                       width={1280}
                       height={800}
                       loading="lazy"
+                      decoding="async"
                       className="aspect-[16/10] w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>

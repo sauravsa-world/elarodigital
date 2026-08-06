@@ -10,7 +10,15 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Link to="/" className="inline-flex items-center gap-2">
-              <img src={logo.url} alt="Elarodital logo" className="h-10 w-auto" />
+              <img
+                src={logo.url}
+                alt="Elaro Digital — digital marketing agency in Bihar logo"
+                width={160}
+                height={40}
+                loading="lazy"
+                decoding="async"
+                className="h-10 w-auto"
+              />
             </Link>
             <p className="mt-5 text-sm text-muted-foreground max-w-sm leading-relaxed">
               Elarodital is a premium digital marketing agency in Bihar building brands, websites and lead-generation systems that drive measurable growth.
