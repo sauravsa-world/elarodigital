@@ -150,6 +150,7 @@ function BlogArticle() {
                 alt={author.name}
                 width={32}
                 height={32}
+                decoding="async"
                 className="size-8 rounded-full object-cover"
               />
               <span className="font-medium text-foreground">{author.name}</span>
@@ -285,6 +286,7 @@ function BlogArticle() {
                   width={80}
                   height={80}
                   loading="lazy"
+                  decoding="async"
                   className="size-20 shrink-0 rounded-2xl object-cover"
                 />
                 <div>

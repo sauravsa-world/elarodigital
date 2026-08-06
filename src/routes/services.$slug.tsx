@@ -642,6 +642,8 @@ function ServiceDetailPage() {
               alt={`${service.title} illustration`}
               width={1280}
               height={800}
+              decoding="async"
+              fetchPriority="high"
               className="relative w-full h-auto rounded-3xl ring-1 ring-gold/20 glass-strong"
             />
           </div>
