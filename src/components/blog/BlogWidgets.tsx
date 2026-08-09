@@ -95,7 +95,7 @@ export function CtaBanner({
           <Phone className="size-4" aria-hidden="true" /> {buttonLabel}
         </a>
         <a
-          href="https://api.whatsapp.com/send?phone=919431011994"
+          href="https://wa.me/919431011994"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"

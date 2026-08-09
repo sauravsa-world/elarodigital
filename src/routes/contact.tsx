@@ -57,7 +57,7 @@ function ContactPage() {
         <div className="mx-auto max-w-5xl px-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
             { icon: Phone, label: "Call / WhatsApp", value: "+91 94310 11994", href: "tel:+919431011994" },
-            { icon: MessageCircle, label: "WhatsApp", value: "Chat now", href: "https://api.whatsapp.com/send?phone=919431011994" },
+            { icon: MessageCircle, label: "WhatsApp", value: "Chat now", href: "https://wa.me/919431011994" },
             { icon: Mail, label: "Email", value: "elarodigitalagency@gmail.com", href: "mailto:elarodigitalagency@gmail.com" },
             { icon: MapPin, label: "Office", value: "Powerganj, Bairagi, Gaya, Bihar" },
           ].map(({ icon: Icon, label, value, href }) => (

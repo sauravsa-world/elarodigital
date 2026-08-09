@@ -70,9 +70,9 @@ export function Navbar() {
 
           <div className="flex items-center gap-2">
             <a
-              href="https://api.whatsapp.com/send?phone=919431011994"
+              href="https://wa.me/919431011994"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="hidden md:inline-flex items-center gap-1.5 rounded-full bg-[color:var(--brand-2)] px-3.5 py-2 text-sm font-semibold text-white hover:opacity-95 transition"
             >
               <MessageCircle className="size-4" /> WhatsApp
@@ -111,9 +111,9 @@ export function Navbar() {
               ))}
               <li>
                 <a
-                  href="https://api.whatsapp.com/send?phone=919431011994"
+                  href="https://wa.me/919431011994"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   onClick={() => setOpen(false)}
                   className="mt-2 flex items-center justify-center gap-1.5 rounded-full bg-[color:var(--brand-2)] px-4 py-3 text-sm font-semibold text-white"
                 >

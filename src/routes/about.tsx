@@ -577,9 +577,9 @@ function AboutPage() {
                 <Phone className="size-4" /> Call Now
               </a>
               <a
-                href="https://api.whatsapp.com/send?phone=919431011994"
+                href="https://wa.me/919431011994"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-[color:var(--brand-2)] px-6 py-3.5 text-sm font-bold text-white hover:opacity-95 transition"
               >
                 <MessageCircle className="size-4" /> WhatsApp
@@ -599,9 +599,9 @@ function AboutPage() {
             { icon: Globe2, label: "Website", value: "elarodigital.lovable.app", href: "https://elarodigital.lovable.app" },
             { icon: Phone, label: "Phone", value: "+91 94310 11994", href: "tel:+919431011994" },
             { icon: Mail, label: "Email", value: "info@elarodigital.lovable.app", href: "mailto:info@elarodigital.lovable.app" },
-            { icon: MessageCircle, label: "WhatsApp", value: "Chat with us", href: "https://api.whatsapp.com/send?phone=919431011994" },
+            { icon: MessageCircle, label: "WhatsApp", value: "Chat with us", href: "https://wa.me/919431011994" },
           ].map((c) => (
-            <a key={c.label} href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="rounded-3xl bg-white border border-border p-6 hover:border-brand hover:shadow-[0_20px_45px_-20px_rgba(79,70,229,0.25)] transition block">
+            <a key={c.label} href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="rounded-3xl bg-white border border-border p-6 hover:border-brand hover:shadow-[0_20px_45px_-20px_rgba(79,70,229,0.25)] transition block">
               <c.icon className="size-5 text-brand" aria-hidden="true" />
               <div className="mt-4 text-xs uppercase tracking-[0.18em] text-muted-foreground">{c.label}</div>
               <div className="mt-1 text-sm font-semibold break-all">{c.value}</div>

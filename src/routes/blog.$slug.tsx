@@ -355,7 +355,7 @@ function BlogArticle() {
                   Powerganj, Bairagi, Gaya, Bihar 823001
                 </p>
                 <a
-                  href="https://api.whatsapp.com/send?phone=919431011994"
+                  href="https://wa.me/919431011994"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-emerald-500 px-4 py-2.5 text-sm font-semibold text-white"
