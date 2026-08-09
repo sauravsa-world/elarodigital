@@ -3,12 +3,14 @@ import { useEffect, useState } from "react";
 import { Menu, X, ArrowRight, MessageCircle } from "lucide-react";
 import logo from "@/assets/elaro-mark.png.asset.json";
 
+const COURSES_URL = "https://elarodigitalcourse.lovable.app";
+
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
   { to: "/portfolio", label: "Portfolio" },
-  { to: "/courses", label: "Courses" },
+  { to: "/courses", label: "Courses", external: true, href: COURSES_URL },
   { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
 ] as const;
@@ -54,8 +56,20 @@ export function Navbar() {
           </Link>
 
           <ul className="hidden lg:flex items-center gap-1">
-            {navLinks.map((l) => (
-              <li key={l.to}>
+            {navLinks.map((l) =>
+              "external" in l && l.external ? (
+                <li key={l.to}>
+                  <a
+                    href={"href" in l ? l.href : l.to}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-2 text-sm text-slate-600 hover:text-foreground rounded-full transition-colors"
+                  >
+                    {l.label}
+                  </a>
+                </li>
+              ) : (
+                <li key={l.to}>
                 <Link
                   to={l.to}
                   activeOptions={{ exact: l.to === "/" }}
@@ -64,8 +78,9 @@ export function Navbar() {
                 >
                   {l.label}
                 </Link>
-              </li>
-            ))}
+                </li>
+              )
+            )}
           </ul>
 
           <div className="flex items-center gap-2">
@@ -97,8 +112,21 @@ export function Navbar() {
         {open ? (
           <div className="lg:hidden mt-2 rounded-3xl bg-white border border-border p-4 shadow-lg animate-fade-in">
             <ul className="grid gap-1">
-              {navLinks.map((l) => (
-                <li key={l.to}>
+              {navLinks.map((l) =>
+                "external" in l && l.external ? (
+                  <li key={l.to}>
+                    <a
+                      href={"href" in l ? l.href : l.to}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setOpen(false)}
+                      className="block rounded-2xl px-4 py-3 text-sm hover:bg-slate-100"
+                    >
+                      {l.label}
+                    </a>
+                  </li>
+                ) : (
+                  <li key={l.to}>
                   <Link
                     to={l.to}
                     onClick={() => setOpen(false)}
@@ -107,8 +135,9 @@ export function Navbar() {
                   >
                     {l.label}
                   </Link>
-                </li>
-              ))}
+                  </li>
+                )
+              )}
               <li>
                 <a
                   href="https://wa.me/919431011994"

@@ -71,7 +71,7 @@ export function Footer() {
               <li><Link to="/about" className="hover:text-foreground transition">About</Link></li>
               <li><Link to="/portfolio" className="hover:text-foreground transition">Portfolio</Link></li>
               <li><Link to="/testimonials" className="hover:text-foreground transition">Testimonials</Link></li>
-              <li><Link to="/courses" className="hover:text-foreground transition">Courses</Link></li>
+              <li><a href="https://elarodigitalcourse.lovable.app" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition">Courses</a></li>
               <li><Link to="/blog" className="hover:text-foreground transition">Blog</Link></li>
               <li><Link to="/contact" className="hover:text-foreground transition">Contact</Link></li>
             </ul>
