@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, ArrowRight, MessageCircle } from "lucide-react";
-import logo from "@/assets/logo.png.asset.json";
+import logo from "@/assets/elaro-mark.png.asset.json";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -41,11 +41,11 @@ export function Navbar() {
             <img
               src={logo.url}
               alt="ElaroDigital — Digital Marketing Agency"
-              width={128}
-              height={32}
+              width={40}
+              height={40}
               decoding="async"
               fetchPriority="high"
-              className="h-8 w-auto"
+              className="h-9 w-9 rounded-lg"
             />
             <span className="font-display text-lg sm:text-xl tracking-tight">
               <span className="text-foreground">Elaro</span>

@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, Linkedin, Youtube, Mail, Phone, MapPin, type LucideIcon } from "lucide-react";
-import logo from "@/assets/logo.png.asset.json";
+import logo from "@/assets/elaro-mark.png.asset.json";
 import { services } from "@/data/services";
 
 export function Footer() {
@@ -13,11 +13,11 @@ export function Footer() {
               <img
                 src={logo.url}
                 alt="Elaro Digital — digital marketing agency in Bihar logo"
-                width={160}
-                height={40}
+              width={44}
+              height={44}
                 loading="lazy"
                 decoding="async"
-                className="h-10 w-auto"
+                className="h-11 w-11 rounded-lg"
               />
             </Link>
             <p className="mt-5 text-sm text-muted-foreground max-w-sm leading-relaxed">
