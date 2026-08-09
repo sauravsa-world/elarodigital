@@ -17,7 +17,7 @@ import {
   Zap,
 } from "lucide-react";
 
-const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=919431011994";
+const WHATSAPP_URL = "https://wa.me/919431011994";
 
 type SampleProject = { title: string; summary: string; result: string };
 type Detail = {
@@ -562,7 +562,7 @@ function ServiceCTAs() {
       <a
         href={WHATSAPP_URL}
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         className="inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm font-medium hover:text-gold transition"
       >
         <MessageCircle className="size-4" /> WhatsApp Now

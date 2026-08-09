@@ -5,7 +5,7 @@ import { services } from "@/data/services";
 
 const CONTACT_EMAIL = "elarodigitalagency@gmail.com";
 const FORMSUBMIT_URL = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
-const WHATSAPP_URL = "https://api.whatsapp.com/send?phone=919431011994";
+const WHATSAPP_URL = "https://wa.me/919431011994";
 
 const businessTypes = [
   "Coaching Institute",
@@ -80,7 +80,7 @@ export function Hero() {
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-[color:var(--brand-2)] px-6 py-3.5 text-sm font-bold text-white shadow-emerald hover:opacity-95 transition"
               >
                 <MessageCircle className="size-5" /> Free WhatsApp Audit

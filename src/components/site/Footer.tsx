@@ -29,16 +29,16 @@ export function Footer() {
             </p>
             <div className="mt-6 flex gap-2">
               {([
-                { Icon: Instagram, label: "Follow Elaro Digital on Instagram", href: "https://www.instagram.com/elarodigital" },
-                { Icon: Facebook, label: "Follow Elaro Digital on Facebook", href: "https://www.facebook.com/elarodigital" },
-                { Icon: Linkedin, label: "Connect with Elaro Digital on LinkedIn", href: "https://www.linkedin.com/company/elarodigital" },
+                { Icon: Instagram, label: "Follow Elaro Digital on Instagram", href: "https://www.instagram.com/elarodigitalagency.in/" },
+                { Icon: Facebook, label: "Follow Elaro Digital on Facebook", href: "https://www.facebook.com/Elarodigitalagency" },
+                { Icon: Linkedin, label: "Connect with Elaro Digital on LinkedIn", href: "https://www.linkedin.com/in/elarodigitalagency-baa08a3b1/" },
                 { Icon: Youtube, label: "Subscribe to Elaro Digital on YouTube", href: "https://www.youtube.com/@elarodigital" },
               ] as { Icon: LucideIcon; label: string; href: string }[]).map(({ Icon, label, href }) => (
                 <a
                   key={label}
                   href={href}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   aria-label={label}
                   className="grid place-items-center size-10 rounded-full border border-border bg-white hover:text-brand transition"
                 >
