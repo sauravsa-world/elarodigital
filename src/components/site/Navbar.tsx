@@ -10,7 +10,7 @@ const navLinks = [
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
   { to: "/portfolio", label: "Portfolio" },
-  { to: COURSES_URL, label: "Courses", external: true },
+  { to: "/courses", label: "Courses", external: true, href: COURSES_URL },
   { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
 ] as const;
