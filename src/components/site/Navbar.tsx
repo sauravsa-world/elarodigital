@@ -60,7 +60,7 @@ export function Navbar() {
               "external" in l && l.external ? (
                 <li key={l.to}>
                   <a
-                    href={l.to}
+                    href={"href" in l ? l.href : l.to}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-3 py-2 text-sm text-slate-600 hover:text-foreground rounded-full transition-colors"
@@ -116,7 +116,7 @@ export function Navbar() {
                 "external" in l && l.external ? (
                   <li key={l.to}>
                     <a
-                      href={l.to}
+                      href={"href" in l ? l.href : l.to}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setOpen(false)}
