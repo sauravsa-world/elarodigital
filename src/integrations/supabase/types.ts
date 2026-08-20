@@ -14,7 +14,138 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      template_requests: {
+        Row: {
+          brand_colors: Json
+          business_name: string
+          category: string
+          created_at: string
+          cta: string | null
+          customer_name: string | null
+          email: string | null
+          font_preference: string | null
+          id: string
+          location: string
+          logo_url: string | null
+          offer: string | null
+          phone: string
+          plan: string
+          products_services: Json
+          selected_templates: Json
+          social_links: Json
+          special_instructions: string | null
+          status: string
+          submission_date: string
+          tagline: string | null
+          updated_at: string
+          upgrade_interest: boolean
+          uploaded_images: string[]
+          website: string | null
+          whatsapp: string | null
+        }
+        Insert: {
+          brand_colors?: Json
+          business_name: string
+          category: string
+          created_at?: string
+          cta?: string | null
+          customer_name?: string | null
+          email?: string | null
+          font_preference?: string | null
+          id?: string
+          location: string
+          logo_url?: string | null
+          offer?: string | null
+          phone: string
+          plan?: string
+          products_services?: Json
+          selected_templates?: Json
+          social_links?: Json
+          special_instructions?: string | null
+          status?: string
+          submission_date?: string
+          tagline?: string | null
+          updated_at?: string
+          upgrade_interest?: boolean
+          uploaded_images?: string[]
+          website?: string | null
+          whatsapp?: string | null
+        }
+        Update: {
+          brand_colors?: Json
+          business_name?: string
+          category?: string
+          created_at?: string
+          cta?: string | null
+          customer_name?: string | null
+          email?: string | null
+          font_preference?: string | null
+          id?: string
+          location?: string
+          logo_url?: string | null
+          offer?: string | null
+          phone?: string
+          plan?: string
+          products_services?: Json
+          selected_templates?: Json
+          social_links?: Json
+          special_instructions?: string | null
+          status?: string
+          submission_date?: string
+          tagline?: string | null
+          updated_at?: string
+          upgrade_interest?: boolean
+          uploaded_images?: string[]
+          website?: string | null
+          whatsapp?: string | null
+        }
+        Relationships: []
+      }
+      templates: {
+        Row: {
+          category: string
+          created_at: string
+          description: string
+          id: string
+          is_active: boolean
+          is_featured: boolean
+          name: string
+          preview_image: string | null
+          tags: string[]
+          type: string
+          updated_at: string
+          use_case: string
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          description?: string
+          id?: string
+          is_active?: boolean
+          is_featured?: boolean
+          name: string
+          preview_image?: string | null
+          tags?: string[]
+          type: string
+          updated_at?: string
+          use_case?: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          description?: string
+          id?: string
+          is_active?: boolean
+          is_featured?: boolean
+          name?: string
+          preview_image?: string | null
+          tags?: string[]
+          type?: string
+          updated_at?: string
+          use_case?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
