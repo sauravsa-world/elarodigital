@@ -26,7 +26,7 @@ export function TemplateCrossSell() {
               className="group rounded-3xl border border-border p-6 transition hover:border-brand hover:shadow-[0_18px_40px_-24px_rgba(15,23,42,0.25)]"
             >
               <h3 className="font-display text-lg font-bold">{s.title}</h3>
-              <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{s.excerpt ?? s.description}</p>
+              <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{s.short}</p>
               <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand">
                 Explore service <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
               </span>
