@@ -19,9 +19,8 @@ const DESCRIPTION =
 const URL = "https://elarodigital.lovable.app/templates";
 
 export const Route = createFileRoute("/templates/")({
-  validateSearch: (search: Record<string, unknown>) => ({
-    category: typeof search.category === "string" ? search.category : undefined,
-  }),
+  validateSearch: (search: Record<string, unknown>): { category?: string } =>
+    typeof search.category === "string" ? { category: search.category } : {},
   head: () => ({
     meta: [
       { title: TITLE },
