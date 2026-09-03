@@ -10,6 +10,7 @@ const navLinks = [
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
   { to: "/portfolio", label: "Portfolio" },
+  { to: "/templates", label: "Free Templates" },
   { to: "/courses", label: "Courses", external: true, href: COURSES_URL },
   { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact" },
