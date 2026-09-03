@@ -68,6 +68,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <h3 className="text-sm font-semibold tracking-wider uppercase text-foreground">Company</h3>
             <ul className="mt-5 space-y-2.5 text-sm text-muted-foreground">
+              <li><Link to="/templates" search={{ category: undefined }} className="hover:text-foreground transition">Free Templates</Link></li>
               <li><Link to="/about" className="hover:text-foreground transition">About</Link></li>
               <li><Link to="/portfolio" className="hover:text-foreground transition">Portfolio</Link></li>
               <li><Link to="/testimonials" className="hover:text-foreground transition">Testimonials</Link></li>

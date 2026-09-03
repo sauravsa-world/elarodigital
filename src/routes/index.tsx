@@ -13,6 +13,7 @@ const Industries = lazy(() => import("@/components/site/Industries").then(m => (
 const Testimonials = lazy(() => import("@/components/site/Testimonials").then(m => ({ default: m.Testimonials })));
 const Team = lazy(() => import("@/components/site/Team").then(m => ({ default: m.Team })));
 const FAQ = lazy(() => import("@/components/site/FAQ").then(m => ({ default: m.FAQ })));
+const TemplatesPromo = lazy(() => import("@/components/site/TemplatesPromo").then(m => ({ default: m.TemplatesPromo })));
 const LeadForm = lazy(() => import("@/components/site/LeadForm").then(m => ({ default: m.LeadForm })));
 const Footer = lazy(() => import("@/components/site/Footer").then(m => ({ default: m.Footer })));
 
@@ -58,6 +59,7 @@ function Index() {
         <Suspense fallback={null}>
           <StatsBar />
           <ServicesGrid />
+          <TemplatesPromo />
           <WhyUs />
           <Process />
           <Results />
