@@ -36,7 +36,7 @@ export function TemplateOfferCard() {
         </ul>
         <Link
           to="/templates"
-          search={{}}
+          search={{ category: undefined }}
           className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground hover:opacity-95 transition"
         >
           Claim my free month

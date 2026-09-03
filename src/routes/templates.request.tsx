@@ -243,7 +243,7 @@ function RequestPage() {
                 </a>
                 <Link
                   to="/templates"
-                  search={{}}
+                  search={{ category: undefined }}
                   className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-3 text-sm font-semibold"
                 >
                   Back to templates
@@ -260,7 +260,7 @@ function RequestPage() {
     <PageShell>
       <section className="py-14 sm:py-20">
         <div className="mx-auto max-w-3xl px-4">
-          <Link to="/templates" search={{}} className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand">
+          <Link to="/templates" search={{ category: undefined }} className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand">
             <ArrowLeft className="size-4" /> Back to template library
           </Link>
           <h1 className="mt-5 font-display text-3xl sm:text-4xl font-bold tracking-tight">
@@ -297,7 +297,7 @@ function RequestPage() {
             ) : (
               <p className="mb-6 rounded-2xl bg-slate-50 px-4 py-3 text-sm text-muted-foreground">
                 No templates selected yet — we'll recommend the best set for your category, or{" "}
-                <Link to="/templates" search={{}} className="font-semibold text-brand">pick your favourites</Link>.
+                <Link to="/templates" search={{ category: undefined }} className="font-semibold text-brand">pick your favourites</Link>.
               </p>
             )}
 

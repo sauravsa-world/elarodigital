@@ -29,7 +29,7 @@ export function TemplatesPromo() {
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
                 to="/templates"
-                search={{}}
+                search={{ category: undefined }}
                 className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3.5 text-sm font-semibold text-primary-foreground hover:opacity-95 transition"
               >
                 Browse free templates <ArrowRight className="size-4" />

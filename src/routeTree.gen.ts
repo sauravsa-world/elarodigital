@@ -22,6 +22,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as TemplatesIndexRouteImport } from './routes/templates.index'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as TemplatesRequestRouteImport } from './routes/templates.request'
 import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as BlogCategorySlugRouteImport } from './routes/blog.category.$slug'
@@ -91,6 +92,11 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   path: '/',
   getParentRoute: () => BlogRoute,
 } as any)
+const TemplatesRequestRoute = TemplatesRequestRouteImport.update({
+  id: '/request',
+  path: '/request',
+  getParentRoute: () => TemplatesRoute,
+} as any)
 const ServicesSlugRoute = ServicesSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -120,6 +126,7 @@ export interface FileRoutesByFullPath {
   '/testimonials': typeof TestimonialsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
+  '/templates/request': typeof TemplatesRequestRoute
   '/blog/': typeof BlogIndexRoute
   '/services/': typeof ServicesIndexRoute
   '/templates/': typeof TemplatesIndexRoute
@@ -135,6 +142,7 @@ export interface FileRoutesByTo {
   '/testimonials': typeof TestimonialsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
+  '/templates/request': typeof TemplatesRequestRoute
   '/blog': typeof BlogIndexRoute
   '/services': typeof ServicesIndexRoute
   '/templates': typeof TemplatesIndexRoute
@@ -154,6 +162,7 @@ export interface FileRoutesById {
   '/testimonials': typeof TestimonialsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
+  '/templates/request': typeof TemplatesRequestRoute
   '/blog/': typeof BlogIndexRoute
   '/services/': typeof ServicesIndexRoute
   '/templates/': typeof TemplatesIndexRoute
@@ -174,6 +183,7 @@ export interface FileRouteTypes {
     | '/testimonials'
     | '/blog/$slug'
     | '/services/$slug'
+    | '/templates/request'
     | '/blog/'
     | '/services/'
     | '/templates/'
@@ -189,6 +199,7 @@ export interface FileRouteTypes {
     | '/testimonials'
     | '/blog/$slug'
     | '/services/$slug'
+    | '/templates/request'
     | '/blog'
     | '/services'
     | '/templates'
@@ -207,6 +218,7 @@ export interface FileRouteTypes {
     | '/testimonials'
     | '/blog/$slug'
     | '/services/$slug'
+    | '/templates/request'
     | '/blog/'
     | '/services/'
     | '/templates/'
@@ -319,6 +331,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/templates/request': {
+      id: '/templates/request'
+      path: '/request'
+      fullPath: '/templates/request'
+      preLoaderRoute: typeof TemplatesRequestRouteImport
+      parentRoute: typeof TemplatesRoute
+    }
     '/services/$slug': {
       id: '/services/$slug'
       path: '/$slug'
@@ -372,10 +391,12 @@ const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
 )
 
 interface TemplatesRouteChildren {
+  TemplatesRequestRoute: typeof TemplatesRequestRoute
   TemplatesIndexRoute: typeof TemplatesIndexRoute
 }
 
 const TemplatesRouteChildren: TemplatesRouteChildren = {
+  TemplatesRequestRoute: TemplatesRequestRoute,
   TemplatesIndexRoute: TemplatesIndexRoute,
 }
 

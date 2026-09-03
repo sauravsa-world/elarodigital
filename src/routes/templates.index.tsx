@@ -87,7 +87,7 @@ function TemplatesPage() {
   }, [templates, category, type, query]);
 
   const setCategory = (slug?: string) =>
-    navigate({ search: slug ? { category: slug } : {} });
+    navigate({ search: { category: slug } });
 
   return (
     <PageShell>
