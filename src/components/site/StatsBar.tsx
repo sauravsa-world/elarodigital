@@ -52,7 +52,6 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
     return () => {
       observer.disconnect();
       window.clearTimeout(fallback);
-      window.clearTimeout(fallback);
       cancelAnimationFrame(raf);
     };
   }, [to]);
