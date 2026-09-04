@@ -1,22 +1,64 @@
-import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement | null>(null);
-  const inView = useInView(ref, { once: true });
-  const mv = useMotionValue(0);
-  const rounded = useTransform(mv, (v) => Math.floor(v).toLocaleString());
+  // Start at the real value so SSR / slow JS always shows a correct number.
+  const [value, setValue] = useState(to);
+  const started = useRef(false);
 
   useEffect(() => {
-    if (inView) {
-      const controls = animate(mv, to, { duration: 1.6, ease: "easeOut" });
-      return controls.stop;
-    }
-  }, [inView, mv, to]);
+    const node = ref.current;
+    if (!node) return;
+
+    const prefersReduced =
+      typeof window !== "undefined" &&
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced) return;
+
+    let raf = 0;
+    const run = () => {
+      if (started.current) return;
+      started.current = true;
+      const duration = 1400;
+      const start = performance.now();
+      const tick = (now: number) => {
+        const p = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - p, 3);
+        setValue(Math.round(to * eased));
+        if (p < 1) raf = requestAnimationFrame(tick);
+      };
+      setValue(0);
+      raf = requestAnimationFrame(tick);
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          observer.disconnect();
+          run();
+        }
+      },
+      { threshold: 0.1 },
+    );
+    observer.observe(node);
+
+    // Reliability net: if the observer never fires (already scrolled past,
+    // hidden container, etc.) the animation still runs once.
+    const fallback = window.setTimeout(() => {
+      observer.disconnect();
+      run();
+    }, 1200);
+
+    return () => {
+      observer.disconnect();
+      window.clearTimeout(fallback);
+      cancelAnimationFrame(raf);
+    };
+  }, [to]);
 
   return (
     <span ref={ref} className="tabular-nums">
-      <motion.span>{rounded}</motion.span>
+      {value.toLocaleString("en-IN")}
       {suffix}
     </span>
   );

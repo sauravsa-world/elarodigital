@@ -7,7 +7,7 @@ export const team: TeamMember[] = [
   {
     name: "Saurav Kumar",
     role: "Founder · Web Developer · Social Media Expert",
-    bio: "Founded Elarodital with a single mission — build websites and brand presences that grow businesses, not just look pretty.",
+    bio: "Founded ElaroDigital with a single mission — build websites and brand presences that grow businesses, not just look pretty.",
     image: sauravAsset.url,
   },
   {
