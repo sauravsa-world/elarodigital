@@ -16,7 +16,7 @@ export function WhyUs() {
     <section className="relative py-28 sm:py-36">
       <div className="mx-auto max-w-7xl px-4">
         <SectionHeading
-          eyebrow="Why Elarodital"
+          eyebrow="Why ElaroDigital"
           title="A premium agency standard, finally accessible."
           description="We bring the rigour of global agencies to growing Indian businesses — with the speed and warmth of a partner who actually picks up the phone."
         />

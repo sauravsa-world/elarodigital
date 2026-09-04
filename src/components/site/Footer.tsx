@@ -25,7 +25,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-5 text-sm text-muted-foreground max-w-sm leading-relaxed">
-              Elarodital is a premium digital marketing agency in Bihar building brands, websites and lead-generation systems that drive measurable growth.
+              ElaroDigital is a premium digital marketing agency in Bihar building brands, websites and lead-generation systems that drive measurable growth.
             </p>
             <div className="mt-6 flex gap-2">
               {([
@@ -89,7 +89,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} Elarodital. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} ElaroDigital. All rights reserved.</p>
           <p>Crafted in Bihar · Built for growth</p>
         </div>
       </div>

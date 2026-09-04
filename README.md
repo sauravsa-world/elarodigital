@@ -1,6 +1,6 @@
-# Elarodital Growth Hub
+# ElaroDigital Growth Hub
 
-Create a premium, modern, high-converting Digital Marketing Agency website for "Elarodital".
+Create a premium, modern, high-converting Digital Marketing Agency website for "ElaroDigital".
 
 IMPORTANT:
 
@@ -86,7 +86,7 @@ Digital Marketing Agency in Bihar Helping Businesses Generate More Leads & Sales
 
 Subheading:
 
-Elarodital helps businesses grow through SEO Services, Social Media Marketing, Meta Ads, Website Development, App Development, Graphic Design, WhatsApp Marketing, Content Marketing, Video Editing, and Lead Generation Solutions.
+ElaroDigital helps businesses grow through SEO Services, Social Media Marketing, Meta Ads, Website Development, App Development, Graphic Design, WhatsApp Marketing, Content Marketing, Video Editing, and Lead Generation Solutions.
 
 Buttons:
 
@@ -152,7 +152,7 @@ Leading Digital Marketing Agency in Bihar
 
 Content:
 
-At Elarodital, we help businesses improve online visibility, generate quality leads, increase sales, and build a powerful digital presence through data-driven marketing strategies. Our team specializes in SEO, Social Media Marketing, Meta Ads, Website Development, App Development, Graphic Design, and Business Growth Solutions.
+At ElaroDigital, we help businesses improve online visibility, generate quality leads, increase sales, and build a powerful digital presence through data-driven marketing strategies. Our team specializes in SEO, Social Media Marketing, Meta Ads, Website Development, App Development, Graphic Design, and Business Growth Solutions.
 
 Include premium image + content layout.
 
@@ -204,7 +204,7 @@ SECTION 5: WHY CHOOSE US
 
 Headline:
 
-Why Businesses Choose Elarodital
+Why Businesses Choose ElaroDigital
 
 Features:
 
@@ -312,7 +312,7 @@ Create 10 Premium Testimonial Cards.
 Testimonials:
 
 Rahul Sharma – Restaurant Owner
-"Elarodital helped us improve our online presence and attract more local customers."
+"ElaroDigital helped us improve our online presence and attract more local customers."
 
 Priya Singh – Coaching Institute
 "Their SEO and marketing strategies increased our inquiries significantly."
@@ -339,7 +339,7 @@ Pooja Kumari – Healthcare Clinic
 "Their local SEO strategies helped increase patient inquiries."
 
 Abhishek Jain – Retail Business Owner
-"Great experience working with the Elarodital team."
+"Great experience working with the ElaroDigital team."
 
 Features:
 
