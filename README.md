@@ -46,7 +46,7 @@ Professional accent colors
 
 NAVBAR:
 
-Logo: ELARODITAL
+Logo: ElaroDigital
 
 Menu:
 
