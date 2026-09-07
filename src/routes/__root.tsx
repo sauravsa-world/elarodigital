@@ -11,7 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import favicon from "../assets/favicon.png.asset.json";
+import favicon from "../assets/favicon-small.png.asset.json";
 import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {

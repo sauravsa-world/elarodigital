@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, Linkedin, Youtube, Mail, Phone, MapPin, type LucideIcon } from "lucide-react";
-import logo from "@/assets/elaro-mark.png.asset.json";
+import logo from "@/assets/elaro-mark.webp.asset.json";
 import { services } from "@/data/services";
 
 export function Footer() {
