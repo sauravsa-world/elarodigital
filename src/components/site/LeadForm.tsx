@@ -6,7 +6,7 @@ import { services } from "@/data/services";
 const CONTACT_EMAIL = "elarodigitalagency@gmail.com";
 const FORMSUBMIT_URL = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 
-export function LeadForm() {
+export function LeadForm({ heading }: { heading?: string }) {
   const [loading, setLoading] = useState(false);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
