@@ -6,7 +6,7 @@ import { services } from "@/data/services";
 const CONTACT_EMAIL = "elarodigitalagency@gmail.com";
 const FORMSUBMIT_URL = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 
-export function LeadForm() {
+export function LeadForm({ heading }: { heading?: string }) {
   const [loading, setLoading] = useState(false);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -64,7 +64,11 @@ export function LeadForm() {
               Free Marketing Audit
             </div>
             <h2 className="mt-5 font-display text-4xl sm:text-5xl font-bold leading-[1.05] tracking-tight">
-              Let's grow your business — <span className="italic text-brand">together</span>.
+              {heading ?? (
+                <>
+                  Let's grow your business — <span className="italic text-brand">together</span>.
+                </>
+              )}
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed max-w-md">
               Tell us about your business and goals. We'll send back a free 15-minute strategy plan within 24 hours — no obligations, no pushy sales.
