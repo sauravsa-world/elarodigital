@@ -314,7 +314,7 @@ function PortfolioPage() {
         </div>
       </section>
 
-      <LeadForm />
+      <LeadForm heading="Want Results Like These for Your Business?" />
     </PageShell>
   );
 }
