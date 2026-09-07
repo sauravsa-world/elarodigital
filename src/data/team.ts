@@ -1,5 +1,5 @@
-import sauravAsset from "@/assets/saurav.png.asset.json";
-import piyushAsset from "@/assets/piyush.png.asset.json";
+import sauravAsset from "@/assets/saurav.webp.asset.json";
+import piyushAsset from "@/assets/piyush.webp.asset.json";
 
 export type TeamMember = { name: string; role: string; bio: string; image: string };
 

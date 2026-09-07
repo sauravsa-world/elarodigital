@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, ArrowRight, MessageCircle } from "lucide-react";
-import logo from "@/assets/elaro-mark.png.asset.json";
+import logo from "@/assets/elaro-mark.webp.asset.json";
 
 const COURSES_URL = "https://elarodigitalcourse.lovable.app";
 

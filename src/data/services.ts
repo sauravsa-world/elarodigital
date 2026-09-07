@@ -10,15 +10,15 @@ import {
   Magnet,
   type LucideIcon,
 } from "lucide-react";
-import seoImg from "@/assets/services/seo.jpg";
-import smmImg from "@/assets/services/social-media.jpg";
-import metaImg from "@/assets/services/meta-ads.jpg";
-import googleImg from "@/assets/services/google-ads.jpg";
-import webImg from "@/assets/services/web-dev.jpg";
-import appImg from "@/assets/services/app-dev.jpg";
-import gdImg from "@/assets/services/graphic-design.jpg";
-import waImg from "@/assets/services/whatsapp.jpg";
-import leadImg from "@/assets/services/lead-gen.jpg";
+import seoImg from "@/assets/services/seo.webp";
+import smmImg from "@/assets/services/social-media.webp";
+import metaImg from "@/assets/services/meta-ads.webp";
+import googleImg from "@/assets/services/google-ads.webp";
+import webImg from "@/assets/services/web-dev.webp";
+import appImg from "@/assets/services/app-dev.webp";
+import gdImg from "@/assets/services/graphic-design.webp";
+import waImg from "@/assets/services/whatsapp.webp";
+import leadImg from "@/assets/services/lead-gen.webp";
 
 export type Service = {
   slug: string;
